@@ -8,6 +8,13 @@ Il s'agit d'une application web permettant aux utilisateurs de consulter un cata
 
 Ce projet m'a permis de mettre en pratique les connaissances acquises durant ma formation, notamment en développement web, en programmation JavaScript et en manipulation de données JSON.
 
+Déploiement en ligne
+
+Le site est accessible à l'adresse suivante :
+
+https://mustapha-stack.github.io/formation-en-ligne/
+
+
 ## 🛠️ Technologies utilisées
 
 - **HTML5** : structure des pages web.
