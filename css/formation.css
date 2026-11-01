@@ -1,0 +1,1008 @@
+/* =========================================================
+   INFORMATIONS DE LA FORMATION
+========================================================= */
+
+/* Conteneur des différentes informations de la formation */
+.formation-info {
+    /* Utilise Flexbox pour aligner les éléments */
+    display: flex;
+
+    /* Permet aux éléments de passer à la ligne si nécessaire */
+    flex-wrap: wrap;
+
+    /* Espace entre les éléments */
+    gap: 10px;
+
+    /* Marge verticale */
+    margin: 20px 0;
+}
+
+/* Style de chaque information */
+.info {
+    /* Espacement intérieur */
+    padding: 6px 12px;
+
+    /* Couleur de fond définie dans les variables CSS */
+    background-color: var(--bg-card-header);
+
+    /* Couleur du texte */
+    color: var(--navy-dark);
+
+    /* Coins légèrement arrondis */
+    border-radius: 4px;
+
+    /* Taille du texte */
+    font-size: 13px;
+
+    /* Texte en gras */
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   GRILLE FORMATIONS MULTIPLES
+========================================================= */
+
+/* Grille permettant d'afficher plusieurs formations */
+.cards-grid-3 {
+    /* Utilise CSS Grid */
+    display: grid;
+
+    /* Crée automatiquement plusieurs colonnes
+       selon la largeur disponible */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+
+    /* Espace entre les cartes */
+    gap: 30px;
+}
+
+
+/* =========================================================
+   CARTE INFO & COORDONNÉES
+========================================================= */
+
+/* Ligne contenant une icône et les informations associées */
+.info-item {
+    /* Utilise Flexbox */
+    display: flex;
+
+    /* Espace entre l'icône et le contenu */
+    gap: 18px;
+
+    /* Espace sous chaque élément */
+    margin-bottom: 25px;
+
+    /* Aligne les éléments au début */
+    align-items: flex-start;
+}
+
+/* Icône d'une information */
+.info-icon {
+    /* Taille de l'icône */
+    font-size: 24px;
+
+    /* Couleur de fond */
+    background-color: var(--bg-white);
+
+    /* Bordure autour de l'icône */
+    border: 1px solid var(--border-color);
+
+    /* Largeur de l'icône */
+    width: 48px;
+
+    /* Hauteur de l'icône */
+    height: 48px;
+
+    /* Utilise Flexbox pour centrer l'icône */
+    display: flex;
+
+    /* Centre verticalement */
+    align-items: center;
+
+    /* Centre horizontalement */
+    justify-content: center;
+
+    /* Coins arrondis */
+    border-radius: 8px;
+
+    /* Empêche l'icône de rétrécir */
+    flex-shrink: 0;
+}
+
+/* Titre en gras dans un élément d'information */
+.info-item strong {
+    /* Couleur du titre */
+    color: var(--navy-dark);
+
+    /* Taille du texte */
+    font-size: 16px;
+
+    /* Place l'élément sur sa propre ligne */
+    display: block;
+
+    /* Petit espace sous le titre */
+    margin-bottom: 2px;
+}
+
+/* Paragraphe contenu dans un élément d'information */
+.info-item p {
+    /* Couleur du texte */
+    color: var(--text-gray);
+
+    /* Taille du texte */
+    font-size: 14px;
+
+    /* Hauteur entre les lignes */
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   COMPTEUR DE FORMATIONS
+========================================================= */
+
+/* Conteneur affichant le nombre de formations */
+.formations-count {
+    /* Largeur maximale */
+    max-width: 1200px;
+
+    /* Centre le bloc horizontalement
+       et ajoute une marge inférieure */
+    margin: 0 auto 15px auto;
+
+    /* Espacement horizontal intérieur */
+    padding: 0 20px;
+
+    /* Taille du texte */
+    font-size: 1.05rem;
+
+    /* Couleur du texte */
+    color: #4a5568;
+
+    /* Texte légèrement épais */
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   GRILLE DES FORMATIONS
+========================================================= */
+
+/* Conteneur principal des cartes de formation */
+.formations-grid {
+    /* Utilise CSS Grid */
+    display: grid;
+
+    /* Crée automatiquement des colonnes
+       d'au moins 280px */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
+    /* Espace entre les cartes */
+    gap: 25px;
+
+    /* Largeur maximale de la grille */
+    max-width: 1200px;
+
+    /* Centre la grille horizontalement */
+    margin: 0 auto;
+
+    /* Espacement intérieur */
+    padding: 20px;
+}
+
+
+/* =========================================================
+   CARTE DE FORMATION
+========================================================= */
+
+/* Style général d'une carte de formation */
+.formation-card {
+    /* Couleur de fond blanche */
+    background-color: #ffffff;
+
+    /* Bordure autour de la carte */
+    border: 1px solid #e2e8f0;
+
+    /* Coins arrondis */
+    border-radius: 12px;
+
+    /* Espacement intérieur de la carte */
+    padding: 24px;
+
+    /* Ajoute une ombre légère */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+    /* Utilise Flexbox */
+    display: flex;
+
+    /* Place les éléments verticalement */
+    flex-direction: column;
+
+    /* Répartit l'espace disponible entre les éléments */
+    justify-content: space-between;
+
+    /* Ajoute une animation lors des changements */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* =========================================================
+   EFFET AU SURVOL DE LA CARTE
+========================================================= */
+
+/* Lorsque la souris passe sur une carte */
+.formation-card:hover {
+    /* Fait légèrement remonter la carte */
+    transform: translateY(-5px);
+
+    /* Renforce l'ombre */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================================================
+   TITRE DE LA CARTE
+========================================================= */
+
+/* Style du titre h3 dans une carte */
+.formation-card h3 {
+    /* Supprime la marge située au-dessus du titre */
+    margin-top: 0;
+
+    /* Ajoute un espace sous le titre */
+    margin-bottom: 12px;
+
+    /* Taille du titre */
+    font-size: 1.25rem;
+
+    /* Couleur du titre */
+    color: #1a202c;
+}
+
+
+/* =========================================================
+   PARAGRAPHE DE LA CARTE
+========================================================= */
+
+/* Style du paragraphe dans une carte */
+.formation-card p {
+    /* Couleur du texte */
+    color: #4a5568;
+
+    /* Taille du texte */
+    font-size: 0.95rem;
+
+    /* Hauteur des lignes */
+    line-height: 1.5;
+
+    /* Espace sous le paragraphe */
+    margin-bottom: 20px;
+
+    /* Permet au paragraphe de prendre l'espace disponible */
+    flex-grow: 1;
+}
+
+
+/* =========================================================
+   BOUTON DE LA CARTE
+========================================================= */
+
+/* Style du bouton présent dans une carte de formation */
+.formation-card .btn {
+    /* Affiche le bouton comme un élément en ligne */
+    display: inline-block;
+
+    /* Centre le texte du bouton */
+    text-align: center;
+
+    /* Couleur de fond bleue */
+    background-color: #2563eb;
+
+    /* Couleur du texte blanche */
+    color: #ffffff;
+
+    /* Espacement intérieur */
+    padding: 10px 18px;
+
+    /* Supprime le soulignement du lien */
+    text-decoration: none;
+
+    /* Coins arrondis */
+    border-radius: 6px;
+
+    /* Texte en gras */
+    font-weight: 600;
+
+    /* Animation lors du changement de couleur */
+    transition: background-color 0.2s ease;
+}
+
+
+/* =========================================================
+   EFFET AU SURVOL DU BOUTON
+========================================================= */
+
+/* Lorsque la souris passe sur le bouton */
+.formation-card .btn:hover {
+    /* Utilise un bleu plus foncé */
+    background-color: #1d4ed8;
+}
+
+
+/* =========================================================
+   ICÔNES SVG DES RÉSEAUX SOCIAUX
+========================================================= */
+
+/* Style des icônes SVG présentes dans .social-icons */
+.social-icons svg {
+    /* Largeur de l'icône */
+    width: 18px;
+
+    /* Hauteur de l'icône */
+    height: 18px;
+
+    /* Utilise automatiquement la couleur du lien */
+    fill: currentColor;
+}
+
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+/* Conteneur général de la pagination */
+.pagination {
+    /* Utilise Flexbox */
+    display: flex;
+
+    /* Centre les boutons horizontalement */
+    justify-content: center;
+
+    /* Centre les boutons verticalement */
+    align-items: center;
+
+    /* Espace entre les boutons */
+    gap: 10px;
+
+    /* Marge au-dessus et en dessous */
+    margin: 40px 0 20px;
+}
+
+
+/* =========================================================
+   BOUTONS DE PAGINATION
+========================================================= */
+
+/* Style général des boutons de pagination */
+.pagination-btn {
+    /* Fond transparent */
+    background: transparent;
+
+    /* Supprime la bordure */
+    border: none;
+
+    /* Couleur du texte */
+    color: #4a5568;
+
+    /* Taille du texte */
+    font-size: 1rem;
+
+    /* Épaisseur du texte */
+    font-weight: 500;
+
+    /* Largeur du bouton */
+    width: 42px;
+
+    /* Hauteur du bouton */
+    height: 42px;
+
+    /* Rend le bouton circulaire */
+    border-radius: 50%;
+
+    /* Affiche un curseur en forme de main */
+    cursor: pointer;
+
+    /* Utilise Flexbox */
+    display: flex;
+
+    /* Centre verticalement le contenu */
+    align-items: center;
+
+    /* Centre horizontalement le contenu */
+    justify-content: center;
+
+    /* Animation des changements */
+    transition: all 0.2s ease;
+}
+
+
+/* =========================================================
+   EFFET AU SURVOL DES BOUTONS
+========================================================= */
+
+/* Effet uniquement sur un bouton qui :
+   - n'est pas désactivé
+   - n'est pas la page active */
+.pagination-btn:hover:not(.disabled):not(.active) {
+    /* Ajoute un fond gris clair */
+    background-color: #f1f5f9;
+
+    /* Change la couleur du texte */
+    color: #1e293b;
+}
+
+
+/* =========================================================
+   PAGE ACTIVE
+========================================================= */
+
+/* Style du bouton correspondant à la page actuelle */
+.pagination-btn.active {
+    /* Fond bleu foncé */
+    background-color: #1a2b5b;
+
+    /* Texte blanc */
+    color: #ffffff;
+
+    /* Texte plus épais */
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   BOUTON DÉSACTIVÉ
+========================================================= */
+
+/* Style d'un bouton de pagination désactivé */
+.pagination-btn.disabled {
+    /* Rend le bouton moins visible */
+    opacity: 0.3;
+
+    /* Indique que le bouton ne peut pas être utilisé */
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   POINTS DE SUSPENSION DE LA PAGINATION
+========================================================= */
+
+/* Style des trois points (...) */
+.pagination-dots {
+    /* Couleur des points */
+    color: #a0aec0;
+
+    /* Points en gras */
+    font-weight: bold;
+
+    /* Petit espacement horizontal */
+    padding: 0 4px;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN - PAGE FORMATIONS
+   Adaptation pour tablettes et téléphones
+========================================================= */
+
+
+/* =========================================================
+   TABLETTES
+   Écrans jusqu'à 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* -----------------------------------------------------
+       PAGE HEADER
+    ----------------------------------------------------- */
+
+    .page-header {
+        padding: 70px 6%;
+    }
+
+    .page-header h1 {
+        font-size: 38px;
+
+        line-height: 1.2;
+    }
+
+    .page-header p {
+        font-size: 17px;
+
+        line-height: 1.6;
+    }
+
+
+    /* -----------------------------------------------------
+       SECTION PRINCIPALE
+    ----------------------------------------------------- */
+
+    .section {
+        padding: 60px 6%;
+    }
+
+
+    /* -----------------------------------------------------
+       NOMBRE DE FORMATIONS
+    ----------------------------------------------------- */
+
+    .formations-count {
+        font-size: 16px;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* -----------------------------------------------------
+       GRILLE DES FORMATIONS
+       
+       3 cartes deviennent 2 cartes par ligne.
+    ----------------------------------------------------- */
+
+    .formations-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 25px;
+
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       CARTES
+       
+       Empêche le contenu de dépasser de la carte.
+    ----------------------------------------------------- */
+
+    .formation-card {
+        min-width: 0;
+
+        width: 100%;
+    }
+
+
+    .formation-card h2,
+    .formation-card h3,
+    .formation-card p,
+    .formation-card li {
+        overflow-wrap: break-word;
+    }
+
+
+    /* -----------------------------------------------------
+       INFORMATIONS DE LA FORMATION
+    ----------------------------------------------------- */
+
+    .formation-info {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+    }
+
+
+    /* -----------------------------------------------------
+       PAGINATION
+    ----------------------------------------------------- */
+
+    .pagination {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        margin-top: 35px;
+    }
+
+}
+
+
+/* =========================================================
+   TÉLÉPHONES
+   Écrans jusqu'à 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* -----------------------------------------------------
+       HEADER
+       
+       Si le header est défini dans base.css,
+       cette règle adapte le menu sur téléphone.
+    ----------------------------------------------------- */
+
+    header {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 15px;
+
+        padding: 20px 5%;
+    }
+
+
+    /* -----------------------------------------------------
+       LOGO
+    ----------------------------------------------------- */
+
+    .logo {
+        justify-content: center;
+
+        text-align: center;
+    }
+
+
+    .logo span {
+        font-size: 17px;
+    }
+
+
+    /* -----------------------------------------------------
+       MENU
+    ----------------------------------------------------- */
+
+    nav {
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 8px;
+    }
+
+
+    nav a {
+        font-size: 14px;
+
+        padding: 8px 10px;
+    }
+
+
+    /* -----------------------------------------------------
+       PAGE HEADER
+    ----------------------------------------------------- */
+
+    .page-header {
+        padding: 60px 5%;
+    }
+
+
+    .page-header h1 {
+        font-size: 30px;
+
+        line-height: 1.2;
+    }
+
+
+    .page-header p {
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+
+    /* -----------------------------------------------------
+       SECTION PRINCIPALE
+    ----------------------------------------------------- */
+
+    .section {
+        padding: 50px 5%;
+    }
+
+
+    /* -----------------------------------------------------
+       NOMBRE DE FORMATIONS
+    ----------------------------------------------------- */
+
+    .formations-count {
+        font-size: 15px;
+
+        text-align: center;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* -----------------------------------------------------
+       GRILLE DES FORMATIONS
+       
+       Les cartes passent une par une.
+    ----------------------------------------------------- */
+
+    .formations-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       CARTE FORMATION
+    ----------------------------------------------------- */
+
+    .formation-card {
+        width: 100%;
+
+        min-width: 0;
+    }
+
+
+    /* -----------------------------------------------------
+       TITRES DES CARTES
+    ----------------------------------------------------- */
+
+    .formation-card h2 {
+        font-size: 22px;
+
+        line-height: 1.3;
+    }
+
+
+    .formation-card h3 {
+        font-size: 19px;
+
+        line-height: 1.3;
+    }
+
+
+    /* -----------------------------------------------------
+       DESCRIPTION
+    ----------------------------------------------------- */
+
+    .formation-card p {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+
+    /* -----------------------------------------------------
+       LISTES
+    ----------------------------------------------------- */
+
+    .formation-card ul {
+        padding-left: 20px;
+    }
+
+
+    .formation-card li {
+        font-size: 14px;
+
+        line-height: 1.5;
+
+        margin-bottom: 8px;
+    }
+
+
+    /* -----------------------------------------------------
+       INFORMATIONS
+       
+       Les badges peuvent passer sur plusieurs lignes.
+    ----------------------------------------------------- */
+
+    .formation-info {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+        margin: 15px 0;
+    }
+
+
+    .info {
+        font-size: 12px;
+
+        padding: 5px 10px;
+    }
+
+
+    /* -----------------------------------------------------
+       PAGINATION
+    ----------------------------------------------------- */
+
+    .pagination {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 6px;
+
+        margin-top: 30px;
+    }
+
+
+    .pagination button {
+        min-width: 38px;
+
+        min-height: 38px;
+
+        padding: 8px 10px;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+    ----------------------------------------------------- */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 30px;
+
+        padding: 40px 6%;
+    }
+
+
+    /* -----------------------------------------------------
+       BOUTON CONTACT
+    ----------------------------------------------------- */
+
+    .btn-contact {
+        display: inline-block;
+
+        width: 100%;
+
+        max-width: 250px;
+
+        text-align: center;
+    }
+
+
+    /* -----------------------------------------------------
+       RÉSEAUX SOCIAUX
+    ----------------------------------------------------- */
+
+    .social-icons {
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================================================
+   PETITS TÉLÉPHONES
+   Écrans jusqu'à 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    /* -----------------------------------------------------
+       HEADER
+    ----------------------------------------------------- */
+
+    header {
+        padding: 18px 4%;
+    }
+
+
+    .logo span {
+        font-size: 15px;
+    }
+
+
+    .logo-icon {
+        font-size: 24px;
+    }
+
+
+    /* -----------------------------------------------------
+       MENU
+    ----------------------------------------------------- */
+
+    nav {
+        gap: 5px;
+    }
+
+
+    nav a {
+        font-size: 13px;
+
+        padding: 7px 8px;
+    }
+
+
+    /* -----------------------------------------------------
+       PAGE HEADER
+    ----------------------------------------------------- */
+
+    .page-header {
+        padding: 50px 5%;
+    }
+
+
+    .page-header h1 {
+        font-size: 27px;
+    }
+
+
+    .page-header p {
+        font-size: 15px;
+    }
+
+
+    /* -----------------------------------------------------
+       SECTION
+    ----------------------------------------------------- */
+
+    .section {
+        padding: 45px 5%;
+    }
+
+
+    /* -----------------------------------------------------
+       CARTES
+    ----------------------------------------------------- */
+
+    .formations-grid {
+        gap: 15px;
+    }
+
+
+    .formation-card h2 {
+        font-size: 20px;
+    }
+
+
+    .formation-card h3 {
+        font-size: 18px;
+    }
+
+
+    .formation-card p {
+        font-size: 14px;
+    }
+
+
+    .formation-card li {
+        font-size: 13px;
+    }
+
+
+    /* -----------------------------------------------------
+       BADGES
+    ----------------------------------------------------- */
+
+    .info {
+        font-size: 11px;
+
+        padding: 5px 8px;
+    }
+
+
+    /* -----------------------------------------------------
+       PAGINATION
+    ----------------------------------------------------- */
+
+    .pagination {
+        gap: 5px;
+    }
+
+
+    .pagination button {
+        min-width: 34px;
+
+        min-height: 34px;
+
+        padding: 6px 8px;
+
+        font-size: 13px;
+    }
+
+}

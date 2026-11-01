@@ -1,0 +1,1020 @@
+/* =========================================================
+   RÉINITIALISATION GÉNÉRALE
+   Supprime les marges et espacements par défaut du navigateur.
+   box-sizing: border-box permet d'inclure les bordures et
+   les espacements dans la largeur/hauteur des éléments.
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   VARIABLES CSS
+   Définit les couleurs utilisées dans tout le site.
+   Cela permet de modifier facilement les couleurs à un seul endroit.
+========================================================= */
+
+:root {
+    --navy-dark: #002855;
+    /* Bleu nuit institutionnel */
+
+    --navy-header: #071e3d;
+    /* Bleu très sombre utilisé pour l'en-tête */
+
+    --accent-red: #d9383a;
+    /* Rouge principal utilisé comme couleur d'accent */
+
+    --accent-red-hover: #b82b2d;
+    /* Rouge plus foncé utilisé au survol */
+
+    --text-dark: #1d2a44;
+    /* Couleur principale du texte */
+
+    --text-gray: #5a6e7f;
+    /* Couleur du texte secondaire */
+
+    --bg-body: #f4f6f8;
+    /* Couleur de fond générale de la page */
+
+    --bg-white: #ffffff;
+    /* Couleur blanche */
+
+    --bg-card-header: #ebf1f7;
+    /* Couleur de fond des en-têtes de cartes */
+
+    --border-color: #dbe2ea;
+    /* Couleur des bordures */
+}
+
+
+/* =========================================================
+   HTML
+========================================================= */
+
+html {
+    /* Permet un défilement doux lorsque l'utilisateur
+       clique sur un lien vers une section de la page */
+    scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    /* Définit la police principale du site */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    /* Définit la couleur de fond générale */
+    background-color: var(--bg-body);
+
+    /* Définit la couleur principale du texte */
+    color: var(--text-dark);
+
+    /* Définit la hauteur des lignes pour faciliter la lecture */
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   HEADER
+   En-tête principal du site
+========================================================= */
+
+header {
+    /* Couleur de fond de l'en-tête */
+    background-color: var(--navy-header);
+
+    /* Hauteur minimale de l'en-tête */
+    min-height: 80px;
+
+    /* Active Flexbox */
+    display: flex;
+
+    /* Centre verticalement les éléments */
+    align-items: center;
+
+    /* Place les éléments aux deux extrémités */
+    justify-content: space-between;
+
+    /* Espacement horizontal interne */
+    padding: 0 8%;
+
+    /* Ligne rouge située sous l'en-tête */
+    border-bottom: 4px solid var(--accent-red);
+
+    /* L'en-tête reste visible lors du défilement */
+    position: sticky;
+
+    /* Positionne l'en-tête en haut */
+    top: 0;
+
+    /* Place l'en-tête au-dessus des autres éléments */
+    z-index: 1000;
+
+    /* Ajoute une ombre sous l'en-tête */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    /* Active Flexbox pour le logo et son icône */
+    display: flex;
+
+    /* Centre verticalement les éléments */
+    align-items: center;
+
+    /* Espace entre l'icône et le texte */
+    gap: 12px;
+
+    /* Couleur du texte du logo */
+    color: var(--bg-white);
+
+    /* Taille du texte */
+    font-size: 20px;
+
+    /* Épaisseur du texte */
+    font-weight: 700;
+
+    /* Ajustement léger de l'espacement des lettres */
+    letter-spacing: -0.3px;
+}
+
+
+/* =========================================================
+   ICÔNE DU LOGO
+========================================================= */
+
+.logo-icon {
+    /* Largeur de l'icône */
+    width: 44px;
+
+    /* Hauteur de l'icône */
+    height: 44px;
+
+    /* Active Flexbox */
+    display: flex;
+
+    /* Centre horizontalement le contenu */
+    align-items: center;
+
+    /* Centre verticalement le contenu */
+    justify-content: center;
+
+    /* Arrondit les coins */
+    border-radius: 8px;
+
+    /* Fond rouge */
+    background-color: var(--accent-red);
+
+    /* Couleur de l'icône */
+    color: white;
+
+    /* Taille de l'icône */
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav {
+    /* Active Flexbox */
+    display: flex;
+
+    /* Centre verticalement les liens */
+    align-items: center;
+
+    /* Espace entre les liens */
+    gap: 10px;
+}
+
+
+/* Style des liens de navigation */
+
+nav a {
+    /* Couleur des liens */
+    color: #e2e8f0;
+
+    /* Supprime le soulignement */
+    text-decoration: none;
+
+    /* Taille du texte */
+    font-size: 15px;
+
+    /* Épaisseur du texte */
+    font-weight: 600;
+
+    /* Espacement interne du lien */
+    padding: 10px 16px;
+
+    /* Arrondit les coins */
+    border-radius: 6px;
+
+    /* Animation lors du changement de style */
+    transition: all 0.25s ease;
+}
+
+
+/* Style du lien lorsque la souris passe dessus */
+
+nav a:hover {
+    /* Change la couleur du texte */
+    color: var(--bg-white);
+
+    /* Ajoute un fond légèrement transparent */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Style du lien actuellement actif */
+
+nav a.active {
+    /* Fond rouge */
+    background-color: var(--accent-red);
+
+    /* Texte blanc */
+    color: white;
+}
+
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section {
+    /* Espacement vertical et horizontal des sections */
+    padding: 85px 8%;
+}
+
+
+/* Section avec fond blanc */
+
+.section-light {
+    background-color: var(--bg-white);
+}
+
+
+
+
+
+/* En-tête d'une section */
+
+.section-header {
+    /* Largeur maximale */
+    max-width: 750px;
+
+    /* Centre horizontalement et ajoute une marge inférieure */
+    margin: 0 auto 55px;
+
+    /* Centre le texte */
+    text-align: center;
+}
+
+
+/* Petit label au-dessus du titre */
+
+.section-header .label {
+    /* Couleur rouge */
+    color: var(--accent-red);
+
+    /* Taille du texte */
+    font-size: 13px;
+
+    /* Texte épais */
+    font-weight: 800;
+
+    /* Espace entre les lettres */
+    letter-spacing: 2px;
+
+    /* Transforme le texte en majuscules */
+    text-transform: uppercase;
+
+    /* Espace sous le label */
+    margin-bottom: 10px;
+}
+
+
+/* Titre principal de la section */
+
+.section-header h2 {
+    /* Couleur bleu foncé */
+    color: var(--navy-dark);
+
+    /* Taille du titre */
+    font-size: 38px;
+
+    /* Épaisseur */
+    font-weight: 800;
+
+    /* Hauteur des lignes */
+    line-height: 1.2;
+
+    /* Espace sous le titre */
+    margin-bottom: 16px;
+}
+
+
+/* Paragraphe de la section */
+
+.section-header p {
+    /* Couleur du texte secondaire */
+    color: var(--text-gray);
+
+    /* Taille du texte */
+    font-size: 17px;
+}
+
+
+
+
+/* =========================================================
+   BOUTONS
+========================================================= */
+
+.btn {
+    /* Permet au lien de se comporter comme un bouton */
+    display: inline-block;
+
+    /* Espacement interne */
+    padding: 13px 28px;
+
+    /* Couleur du fond */
+    background-color: var(--navy-dark);
+
+    /* Couleur du texte */
+    color: white;
+
+    /* Supprime le soulignement */
+    text-decoration: none;
+
+    /* Arrondit les coins */
+    border-radius: 6px;
+
+    /* Rend le texte plus épais */
+    font-weight: 700;
+
+    /* Taille du texte */
+    font-size: 15px;
+
+    /* Animation */
+    transition: all 0.3s ease;
+
+    /* Ombre du bouton */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Effet au survol du bouton */
+
+.btn:hover {
+    /* Le bouton devient rouge */
+    background-color: var(--accent-red);
+
+    /* Le bouton monte légèrement */
+    transform: translateY(-2px);
+
+    /* Ajoute une ombre rouge */
+    box-shadow: 0 4px 12px rgba(217, 56, 58, 0.3);
+}
+
+
+/* Variante du bouton avec couleur d'accent */
+
+.btn-accent {
+    background-color: var(--accent-red);
+}
+
+
+/* Inverse la couleur au survol */
+
+.btn-accent:hover {
+    background-color: var(--navy-dark);
+}
+
+
+
+
+
+.page-header {
+    padding: 90px 8%;
+
+    background: linear-gradient(135deg, var(--navy-header), var(--navy-dark));
+
+    color: white;
+
+    text-align: center;
+
+    border-bottom: 4px solid var(--accent-red);
+}
+
+.page-header h1 {
+    font-size: 46px;
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+
+    line-height: 1.2;
+}
+
+.page-header p {
+    max-width: 720px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    color: #e2e8f0;
+}
+
+
+/* =========================================================
+   FOOTER
+   Pied de page compact
+========================================================= */
+
+footer {
+    /* Fond noir */
+    background-color: #000000;
+
+    /* Texte blanc */
+    color: #ffffff;
+
+    /* Espacement intérieur */
+    padding: 25px 30px;
+
+    /* Police utilisée dans le footer */
+    font-family: Arial, sans-serif;
+}
+
+
+/* Conteneur principal du footer */
+
+.footer-container {
+    /* Largeur maximale */
+    max-width: 1200px;
+
+    /* Centre le conteneur */
+    margin: 0 auto;
+
+    /* Utilise CSS Grid */
+    display: grid;
+
+    /* Crée quatre colonnes */
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+
+    /* Espace entre les colonnes */
+    gap: 20px;
+
+    /* Centre verticalement les éléments */
+    align-items: center;
+}
+
+
+/* Chaque colonne du footer */
+
+.footer-col {
+    /* Aligne le contenu à gauche */
+    text-align: left;
+}
+
+
+/* =========================================================
+   COLONNE 1 : LOGO ET CRÉDITS
+========================================================= */
+
+.footer-brand {
+    /* Utilise Flexbox */
+    display: flex;
+
+    /* Place les éléments verticalement */
+    flex-direction: column;
+
+    /* Petit espace entre les éléments */
+    gap: 4px;
+}
+
+
+
+
+/* Copyright */
+
+.footer-brand p.copyright {
+    /* Texte blanc */
+    color: #ffffff;
+
+    /* Petite taille */
+    font-size: 0.8rem;
+
+    /* Supprime les marges */
+    margin: 0;
+
+    /* Texte légèrement épais */
+    font-weight: 600;
+}
+
+
+/* Lien de confidentialité */
+
+.footer-brand a.privacy-link {
+    /* Couleur gris clair */
+    color: #a0a0a0;
+
+    /* Taille du texte */
+    font-size: 0.78rem;
+
+    /* Supprime le soulignement */
+    text-decoration: none;
+
+    /* Épaisseur normale */
+    font-weight: 400;
+
+    /* Animation de couleur */
+    transition: color 0.2s;
+}
+
+
+/* Effet au survol du lien */
+
+.footer-brand a.privacy-link:hover {
+    /* Devient blanc */
+    color: #ffffff;
+
+    /* Ajoute un soulignement */
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   COLONNES 2 ET 3 : LIENS
+========================================================= */
+
+.footer-links {
+    /* Supprime les puces de la liste */
+    list-style: none;
+
+    /* Supprime l'espacement interne */
+    padding: 0;
+
+    /* Supprime les marges */
+    margin: 0;
+}
+
+
+/* Chaque élément de la liste */
+
+.footer-links li {
+    /* Espace entre les liens */
+    margin-bottom: 6px;
+}
+
+
+/* Liens du footer */
+
+.footer-links a {
+    /* Couleur blanche */
+    color: #ffffff;
+
+    /* Supprime le soulignement */
+    text-decoration: none;
+
+    /* Texte épais */
+    font-weight: 700;
+
+    /* Petite taille */
+    font-size: 0.82rem;
+
+    /* Espace entre les lettres */
+    letter-spacing: 0.5px;
+
+    /* Transforme en majuscules */
+    text-transform: uppercase;
+
+    /* Animation */
+    transition: opacity 0.2s ease;
+}
+
+
+/* Effet au survol */
+
+.footer-links a:hover {
+    /* Rend légèrement transparent */
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   COLONNE 4 : BOUTON ET RÉSEAUX SOCIAUX
+========================================================= */
+
+.footer-action {
+    /* Active Flexbox */
+    display: flex;
+
+    /* Place les éléments verticalement */
+    flex-direction: column;
+
+    /* Centre horizontalement le bouton et les icônes */
+    align-items: center;
+
+    /* Centre verticalement */
+    justify-content: center;
+
+    /* Espace entre les éléments */
+    gap: 12px;
+}
+
+
+/* Bouton de contact */
+
+.btn-contact {
+    /* Affichage en bloc */
+    display: inline-block;
+
+    /* Couleur turquoise */
+    background-color: #20b2aa;
+
+    /* Texte blanc */
+    color: #ffffff;
+
+    /* Supprime le soulignement */
+    text-decoration: none;
+
+    /* Texte épais */
+    font-weight: 700;
+
+    /* Espacement intérieur */
+    padding: 10px 20px;
+
+    /* Coins arrondis */
+    border-radius: 6px;
+
+    /* Espace entre les lettres */
+    letter-spacing: 0.5px;
+
+    /* Texte en majuscules */
+    text-transform: uppercase;
+
+    /* Taille du texte */
+    font-size: 0.8rem;
+
+    /* Centre le texte */
+    text-align: center;
+
+    /* Occupe toute la largeur disponible */
+    width: 100%;
+
+    /* Mais ne dépasse pas 160px */
+    max-width: 160px;
+
+    /* Inclut padding et bordure dans la largeur */
+    box-sizing: border-box;
+
+    /* Animation */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+
+/* Effet au survol du bouton */
+
+.btn-contact:hover {
+    /* Change la couleur */
+    background-color: #1a9690;
+
+    /* Monte légèrement */
+    transform: translateY(-2px);
+}
+
+
+/* Conteneur des icônes sociales */
+
+.social-icons {
+    /* Affiche les icônes horizontalement */
+    display: flex;
+
+    /* Espace entre les icônes */
+    gap: 14px;
+
+    /* Centre verticalement */
+    align-items: center;
+
+    /* Centre horizontalement */
+    justify-content: center;
+
+    /* Largeur complète */
+    width: 100%;
+
+    /* Largeur maximale */
+    max-width: 160px;
+}
+
+
+/* Liens contenant les icônes */
+
+.social-icons a {
+    /* Couleur blanche */
+    color: #ffffff;
+
+    /* Animation */
+    transition: opacity 0.2s ease, transform 0.2s ease;
+
+    /* Permet un bon alignement de l'icône */
+    display: inline-flex;
+}
+
+
+/* Effet au survol des icônes */
+
+.social-icons a:hover {
+    /* Rend légèrement transparent */
+    opacity: 0.8;
+
+    /* Monte légèrement */
+    transform: translateY(-2px);
+}
+
+
+
+
+/* =========================================================
+   BOUTON RETOUR EN HAUT
+========================================================= */
+
+#scrollTopBtn {
+    /* Position fixe par rapport à la fenêtre */
+    position: fixed;
+
+    /* Distance par rapport au bas */
+    bottom: 20px;
+
+    /* Distance par rapport à la droite */
+    right: 20px;
+
+    /* Largeur du bouton */
+    width: 45px;
+
+    /* Hauteur du bouton */
+    height: 45px;
+
+    /* Fond blanc */
+    background-color: #ffffff;
+
+    /* Supprime la bordure */
+    border: none;
+
+    /* Rend le bouton circulaire */
+    border-radius: 50%;
+
+    /* Change le curseur en main */
+    cursor: pointer;
+
+    /* Ajoute une ombre */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    /* Animation */
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+
+    /* Place le bouton au-dessus des autres éléments */
+    z-index: 1000;
+
+    /* Invisible au départ */
+    opacity: 0;
+
+    /* Empêche les interactions lorsqu'il est invisible */
+    visibility: hidden;
+
+    /* Ajoute une icône SVG en arrière-plan */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>');
+
+    /* Empêche la répétition de l'image */
+    background-repeat: no-repeat;
+
+    /* Centre l'icône */
+    background-position: center;
+}
+
+
+/* Classe ajoutée lorsque le bouton doit être affiché */
+
+#scrollTopBtn.show {
+    /* Rend le bouton visible */
+    opacity: 1;
+
+    /* Permet les interactions */
+    visibility: visible;
+}
+
+
+/* Effet au survol du bouton */
+
+#scrollTopBtn:hover {
+    /* Déplace légèrement le bouton vers le haut */
+    transform: translateY(-3px);
+}
+
+
+
+/* =========================================================
+   CARTES GÉNÉRALES
+   Style utilisé pour les cartes de l'équipe ou du site
+========================================================= */
+
+.cards {
+    /* Largeur maximale */
+    max-width: 1150px;
+
+    /* Centre le conteneur */
+    margin: auto;
+
+    /* Active CSS Grid */
+    display: grid;
+
+    /* Crée trois colonnes de même largeur */
+    grid-template-columns: repeat(3, 1fr);
+
+    /* Espace entre les cartes */
+    gap: 30px;
+}
+
+
+/* Carte */
+
+.card {
+    /* Fond blanc */
+    background-color: var(--bg-white);
+
+    /* Coins arrondis */
+    border-radius: 10px;
+
+    /* Bordure */
+    border: 1px solid var(--border-color);
+
+    /* Cache ce qui dépasse de la carte */
+    overflow: hidden;
+
+    /* Ombre légère */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+    /* Animation */
+    transition: all 0.3s ease;
+
+    /* Permet de positionner correctement ::before */
+    position: relative;
+}
+
+
+/* Bande colorée située en haut de la carte */
+
+.card::before {
+    /* Nécessaire pour créer l'élément pseudo */
+    content: "";
+
+    /* Position absolue */
+    position: absolute;
+
+    /* Position en haut */
+    top: 0;
+
+    /* Position à gauche */
+    left: 0;
+
+    /* Prend toute la largeur */
+    width: 100%;
+
+    /* Hauteur de la bande */
+    height: 4px;
+
+    /* Couleur bleue */
+    background-color: var(--navy-dark);
+
+    /* Animation de la couleur */
+    transition: background-color 0.3s ease;
+}
+
+
+/* Effet au survol de la carte */
+
+.card:hover {
+    /* La carte monte légèrement */
+    transform: translateY(-6px);
+
+    /* Ombre plus importante */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Change la couleur de la bande au survol */
+
+.card:hover::before {
+    background-color: var(--accent-red);
+}
+
+
+
+
+
+/* Contenu de la carte */
+
+.card-content {
+    /* Espacement intérieur */
+    padding: 28px;
+}
+
+
+/* Titre de la carte */
+
+.card-content h3 {
+    /* Couleur du titre */
+    color: var(--navy-dark);
+
+    /* Taille */
+    font-size: 22px;
+
+    /* Épaisseur */
+    font-weight: 700;
+
+    /* Espace sous le titre */
+    margin-bottom: 12px;
+}
+
+
+/* Paragraphe de la carte */
+
+.card-content p {
+    /* Couleur du texte */
+    color: var(--text-gray);
+
+    /* Taille du texte */
+    font-size: 15px;
+
+    /* Espace sous le paragraphe */
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   ICÔNES DES CARTES
+========================================================= */
+
+.icon-box {
+    /* Largeur */
+    width: 60px;
+
+    /* Hauteur */
+    height: 60px;
+
+    /* Active Flexbox */
+    display: flex;
+
+    /* Centre verticalement */
+    align-items: center;
+
+    /* Centre horizontalement */
+    justify-content: center;
+
+    /* Espace sous l'icône */
+    margin-bottom: 20px;
+
+    /* Coins arrondis */
+    border-radius: 10px;
+
+    /* Fond gris clair */
+    background-color: #ebf1f7;
+
+    /* Couleur de l'icône */
+    color: var(--navy-dark);
+
+    /* Taille de l'icône */
+    font-size: 28px;
+}
+
+
+/* =========================================================
+   IMAGES DES RÉSEAUX SOCIAUX
+========================================================= */
+
+.social-icons img {
+    /* Largeur de l'image */
+    width: 20px;
+
+    /* Hauteur de l'image */
+    height: 20px;
+
+    /* Conserve les proportions de l'image */
+    object-fit: contain;
+
+    /* Évite certains espaces indésirables autour de l'image */
+    display: block;
+}

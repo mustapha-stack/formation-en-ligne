@@ -1,0 +1,239 @@
+[
+    {
+        "id": 1,
+        "nom": "Testeur Logiciel",
+        "description": "Formation complète pour apprendre à tester des logiciels manuellement et automatiquement.",
+        "cours": [
+            "Introduction aux tests logiciels",
+            "Techniques de test manuel",
+            "Automatisation avec Selenium",
+            "Rapports et documentation des tests"
+        ],
+        "etapes": [
+            "Suivre les modules de formation",
+            "Compléter les exercices pratiques",
+            "Réaliser un projet de test logiciel"
+        ],
+        "competences": [
+            "Rédaction de plans de test",
+            "Exécution de cas de test",
+            "Automatisation des tests",
+            "Analyse et communication des résultats"
+        ]
+    },
+    {
+        "id": 2,
+        "nom": "Intelligence Artificielle",
+        "description": "Apprendre les bases et les techniques avancées de l’IA et du Machine Learning.",
+        "cours": [
+            "Introduction à l’IA",
+            "Bases du Machine Learning",
+            "Apprentissage supervisé et non supervisé",
+            "Réseaux de neurones et Deep Learning"
+        ],
+        "etapes": [
+            "Suivre les cours théoriques",
+            "Compléter des notebooks Python",
+            "Réaliser un mini-projet IA"
+        ],
+        "competences": [
+            "Utilisation de bibliothèques ML (TensorFlow, Scikit-Learn)",
+            "Création et entraînement de modèles",
+            "Analyse et interprétation des résultats"
+        ]
+    },
+    {
+        "id": 3,
+        "nom": "Développeur Wordpress",
+        "description": "Apprendre à créer, configurer et personnaliser des sites web avec WordPress.",
+        "cours": [
+            "Introduction à WordPress",
+            "Gestion des thèmes et plugins",
+            "Personnalisation avec CSS et PHP",
+            "Mise en ligne et sécurité"
+        ],
+        "etapes": [
+            "Installer et configurer un site WordPress",
+            "Apprendre à gérer le contenu",
+            "Créer un site personnalisé complet"
+        ],
+        "competences": [
+            "Création de sites WordPress",
+            "Gestion de plugins et thèmes",
+            "Optimisation de sites web",
+            "Notions de sécurité web"
+        ]
+    },
+    {
+        "id": 4,
+        "nom": "Développeur React",
+        "description": "Maîtriser le développement d’applications web modernes avec React.",
+        "cours": [
+            "Introduction à React",
+            "JSX et composants",
+            "Gestion d’état avec Hooks",
+            "Intégration avec une API REST"
+        ],
+        "etapes": [
+            "Créer des composants React",
+            "Apprendre à gérer l’état",
+            "Construire une application complète"
+        ],
+        "competences": [
+            "Développement en React",
+            "Utilisation des Hooks",
+            "Connexion avec une API",
+            "Bonnes pratiques de développement"
+        ]
+    },
+    {
+        "id": 5,
+        "nom": "Développeur Angular",
+        "description": "Développer des applications web robustes et maintenables avec Angular.",
+        "cours": [
+            "Introduction à Angular",
+            "TypeScript avancé",
+            "Routing et formulaires",
+            "Services et consommation d’API"
+        ],
+        "etapes": [
+            "Apprendre les bases d’Angular",
+            "Développer des composants et formulaires",
+            "Créer une application finale complète"
+        ],
+        "competences": [
+            "Développement Angular",
+            "Création de composants",
+            "Gestion du routing et des formulaires",
+            "Connexion à une API REST"
+        ]
+    },
+    {
+        "id": 6,
+        "nom": "Développeur Fullstack",
+        "description": "Devenir un développeur complet en maîtrisant le front-end et le back-end.",
+        "cours": [
+            "HTML, CSS et JavaScript avancé",
+            "Bases de données SQL et NoSQL",
+            "Développement avec Node.js et Express",
+            "Intégration front-end et back-end"
+        ],
+        "etapes": [
+            "Apprendre les bases du front-end",
+            "Créer une API REST",
+            "Construire une application fullstack"
+        ],
+        "competences": [
+            "Développement front-end et back-end",
+            "Gestion de bases de données",
+            "Création d’API",
+            "Conception d’applications complètes"
+        ]
+    },
+    {
+        "id": 7,
+        "nom": "Développeur Mobile Flutter",
+        "description": "Créer des applications mobiles performantes et multiplateformes avec Flutter.",
+        "cours": [
+            "Introduction à Flutter et Dart",
+            "Widgets et interfaces responsives",
+            "Gestion de l’état",
+            "Connexion à des API"
+        ],
+        "etapes": [
+            "Installer Flutter",
+            "Créer une application mobile simple",
+            "Développer une application complète"
+        ],
+        "competences": [
+            "Développement mobile multiplateforme",
+            "Gestion d’interfaces responsives",
+            "Connexion à des services externes"
+        ]
+    },
+    {
+        "id": 8,
+        "nom": "Cybersécurité",
+        "description": "Comprendre et appliquer les principes fondamentaux de la sécurité informatique.",
+        "cours": [
+            "Introduction à la cybersécurité",
+            "Cryptographie de base",
+            "Sécurité réseau",
+            "Gestion des vulnérabilités"
+        ],
+        "etapes": [
+            "Suivre les cours théoriques",
+            "Mettre en place des exercices pratiques",
+            "Réaliser un projet de sécurisation"
+        ],
+        "competences": [
+            "Analyse de vulnérabilités",
+            "Mise en place de mesures de sécurité",
+            "Utilisation d’outils de cybersécurité"
+        ]
+    },
+    {
+        "id": 9,
+        "nom": "Développeur Python",
+        "description": "Maîtriser Python pour le développement web, la data science et l’automatisation.",
+        "cours": [
+            "Bases du langage Python",
+            "Programmation orientée objet",
+            "Bibliothèques de data science",
+            "Développement web avec Flask/Django"
+        ],
+        "etapes": [
+            "Apprendre les bases de Python",
+            "Réaliser des scripts pratiques",
+            "Créer une application Python complète"
+        ],
+        "competences": [
+            "Programmation Python",
+            "Analyse de données",
+            "Développement web avec Python",
+            "Automatisation de tâches"
+        ]
+    },
+    {
+        "id": 10,
+        "nom": "Design UX/UI",
+        "description": "Apprendre à concevoir des interfaces utilisateur intuitives et esthétiques.",
+        "cours": [
+            "Principes de l’UX design",
+            "Outils de prototypage",
+            "Design visuel et couleurs",
+            "Tests utilisateurs"
+        ],
+        "etapes": [
+            "Étudier les principes UX",
+            "Créer une maquette",
+            "Tester et améliorer un prototype"
+        ],
+        "competences": [
+            "Création de wireframes",
+            "Utilisation d’outils de design",
+            "Amélioration de l’expérience utilisateur"
+        ]
+    },
+    {
+        "id": 11,
+        "nom": "Design UX/UI",
+        "description": "Apprendre à concevoir des interfaces utilisateur intuitives et esthétiques.",
+        "cours": [
+            "Principes de l’UX design",
+            "Outils de prototypage",
+            "Design visuel et couleurs",
+            "Tests utilisateurs"
+        ],
+        "etapes": [
+            "Étudier les principes UX",
+            "Créer une maquette",
+            "Tester et améliorer un prototype"
+        ],
+        "competences": [
+            "Création de wireframes",
+            "Utilisation d’outils de design",
+            "Amélioration de l’expérience utilisateur"
+        ]
+    }
+]

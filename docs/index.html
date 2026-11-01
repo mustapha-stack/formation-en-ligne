@@ -1,0 +1,167 @@
+<!DOCTYPE html> <!-- Indique que le document utilise HTML5 --> <html lang="fr">
+    <head>
+        <!-- Définit l'encodage des caractères pour afficher correctement les accents -->
+        <meta charset="UTF-8">
+        <!-- Permet à la page de s'adapter aux différentes tailles d'écran -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Titre affiché dans l'onglet du navigateur -->
+        <title>Bienvenue -
+            Mon espace formation</title>
+
+        <!-- Feuille de style CSS générale -->
+        <link rel="stylesheet" href="../css/base.css">
+        <!-- Feuille de style CSS spécifique à la page d'accueil --> <link
+            rel="stylesheet" href="../css/index.css">
+        <!-- Icône affichée dans l'onglet du navigateur --> <link rel="icon"
+            href="../images/1.png"> </head> <body>
+        <!-- ========================================================= HEADER / MENU Contient le logo et le menu principal de navigation ========================================================= -->
+        <header> <!-- Bloc contenant le logo et le nom du site --> <div
+                class="logo"> <!-- Icône du logo -->
+
+                <div
+                    class="logo-icon">🎓</div> <!-- Nom du site -->
+                <span>Mon espace formation</span> </div>
+
+            <!-- Menu principal de navigation --> <nav>
+                <!-- Lien vers la page d'accueil. La classe "active" indique que cette page est actuellement sélectionnée. -->
+                <a class="active" href="index.html">Accueil</a>
+                <!-- Lien vers la page À propos --> <a href="propos.html">À
+                    propos</a> <!-- Lien vers la page des formations --> <a
+                    href="formation.html">Formations</a>
+                <!-- Lien vers la page de contact --> <a
+                    href="contact.html">Contact</a> </nav> </header>
+        <!-- ========================================================= CONTENU PRINCIPAL Tout le contenu principal de la page se trouve dans <main> ========================================================= -->
+        <main>
+            <!-- ===================================================== SECTION HERO Première grande section visible sur la page ====================================================== -->
+            <section class="hero"> <!-- Contenu de la section Hero --> <div
+                    class="hero-content">
+                    <!-- Petit texte utilisé comme étiquette -->
+                    <div
+                        class="hero-label"> plateforme d'apprentissage
+                    </div>
+                    <!-- Titre principal de la page -->
+                    <h1> Développez vos
+                        compétences et construisez votre avenir
+                    </h1>
+                    <!-- Description de la plateforme -->
+                    <p> Découvrez notre
+                        espace de formation et explorez des programmes conçus
+                        pour vous accompagner dans votre apprentissage et votre
+                        développement professionnel. </p>
+                    <!-- Bouton permettant d'accéder aux formations --> <a
+                        class="btn btn-accent" href="formation.html"> Découvrir
+                        les formations </a> </div> </section>
+            <!-- ===================================================== SECTION NOTRE APPROCHE Présente la manière dont les formations sont organisées ====================================================== -->
+            <section class="section section-light">
+                <!-- En-tête de la section --> <div class="section-header">
+                    <!-- Petite étiquette indiquant le thème de la section -->
+                    <div class="label"> NOTRE APPROCHE </div>
+                    <!-- Titre de la section --> <h2> Une formation pensée pour
+                        vous </h2>
+                    <!-- Description de l'approche pédagogique --> <p> Notre
+                        objectif est de rendre l'apprentissage simple,
+                        accessible et stimulant grâce à des formations
+                        articulées autour de compétences concrètes. </p> </div>
+                <!-- ================================================= CARTES Contient les trois cartes : Apprendre, Comprendre et Progresser ================================================== -->
+                <div class="cards">
+                    <!-- ================================================= CARTE APPRENDRE ================================================== -->
+                    <article class="card"> <!-- Contenu interne de la carte -->
+                        <div class="card-content">
+                            <!-- Icône représentant l'apprentissage --> <div
+                                class="icon-box"> 📚 </div>
+                            <!-- Texte associé à l'icône --> <div
+                                class="card-text"> <!-- Titre de la carte -->
+                                <h3> Apprendre </h3>
+                                <!-- Description de la carte --> <p> Découvrez
+                                    des notions essentielles et développez
+                                    progressivement vos connaissances. </p>
+                            </div> </div> </article>
+                    <!-- ================================================= CARTE COMPRENDRE ================================================== -->
+                    <article class="card"> <!-- Contenu interne de la carte -->
+                        <div class="card-content">
+                            <!-- Icône représentant la compréhension --> <div
+                                class="icon-box"> 💡 </div>
+                            <!-- Texte associé à l'icône --> <div
+                                class="card-text"> <!-- Titre de la carte -->
+                                <h3> Comprendre </h3>
+                                <!-- Description de la carte --> <p> Des
+                                    contenus structurés pour vous aider à
+                                    maîtriser les concepts clés de votre
+                                    domaine. </p> </div> </div> </article>
+                    <!-- ================================================= CARTE PROGRESSER ================================================== -->
+                    <article class="card"> <!-- Contenu interne de la carte -->
+                        <div class="card-content">
+                            <!-- Icône représentant la progression --> <div
+                                class="icon-box"> 🚀 </div>
+                            <!-- Texte associé à l'icône --> <div
+                                class="card-text"> <!-- Titre de la carte -->
+                                <h3> Progresser </h3>
+                                <!-- Description de la carte --> <p> Mettez vos
+                                    connaissances en pratique et validez vos
+                                    acquis étape par étape. </p> </div> </div>
+                    </article> </div> </section> </main>
+        <!-- ========================================================= BOUTON RETOUR EN HAUT Ce bouton permet de revenir rapidement en haut de la page ========================================================= -->
+        <!-- L'identifiant "scrollTopBtn" permet à JavaScript de sélectionner ce bouton et de lui ajouter un comportement. -->
+        <button id="scrollTopBtn" title="Retour en haut"></button>
+        <!-- ========================================================= FOOTER Pied de page du site Il contient les informations, les liens et les réseaux sociaux ========================================================= -->
+        <footer> <!-- Conteneur principal du pied de page --> <div
+                class="footer-container">
+                <!-- ================================================= COLONNE 1 Informations générales du site ================================================== -->
+                <div class="footer-col footer-brand">
+                    <!-- Mention de copyright --> <p class="copyright"> ©2026
+                        Cégep virtuel </p>
+                    <!-- Lien vers la politique de confidentialité --> <a
+                        href="confidentialite.html" class="privacy-link">
+                        Politique de confidentialité </a> </div>
+                <!-- ================================================= COLONNE 2 Liens concernant le site ================================================== -->
+                <div class="footer-col"> <!-- Liste des liens du footer --> <ul
+                        class="footer-links">
+                        <!-- Lien vers la page À propos --> <li> <a
+                                href="propos.html"> À PROPOS </a> </li>
+                        <!-- Lien vers la page de l'équipe --> <li> <a
+                                href="equipe.html"> ÉQUIPE </a> </li>
+                        <!-- Lien vers la page des partenaires --> <li> <a
+                                href="partenaires.html"> PARTENAIRES </a> </li>
+                        <!-- Lien vers l'intranet --> <li> <a
+                                href="intranet.html"> INTRANET </a> </li> </ul>
+                </div>
+                <!-- ================================================= COLONNE 3 Liens utiles pour les étudiants ================================================== -->
+                <div class="footer-col"> <!-- Liste des liens étudiants --> <ul
+                        class="footer-links">
+                        <!-- Lien vers le guide étudiant --> <li> <a
+                                href="guide.html"> GUIDE ÉTUDIANT </a> </li>
+                        <!-- Lien vers la foire aux questions --> <li> <a
+                                href="faq.html"> FAQ </a> </li>
+                        <!-- Lien vers le blogue --> <li> <a href="blogue.html">
+                                BLOGUE </a> </li> </ul> </div>
+                <!-- ================================================= COLONNE 4 Contact et réseaux sociaux ================================================== -->
+                <div class="footer-col footer-action">
+                    <!-- Bouton permettant d'accéder à la page Contact --> <a
+                        href="contact.html" class="btn-contact"> NOUS JOINDRE
+                    </a>
+                    <!-- ================================================= RÉSEAUX SOCIAUX ================================================== -->
+                    <!-- Conteneur des trois icônes des réseaux sociaux --> <div
+                        class="social-icons">
+                        <!-- ================================================= INSTAGRAM ================================================== -->
+                        <!-- target="_blank" ouvre Instagram dans un nouvel onglet. aria-label permet de donner un nom au lien pour les lecteurs d'écran. -->
+                        <a href="https://instagram.com" target="_blank"
+                            aria-label="Instagram">
+                            <!-- Image représentant l'icône Instagram --> <img
+                                src="../images/Instagram.png" alt="Instagram">
+                        </a>
+                        </a>
+                        <!-- ================================================= FACEBOOK ================================================== -->
+                        <a href="https://facebook.com" target="_blank"
+                            aria-label="Facebook">
+                            <!-- Image représentant l'icône Facebook --> <img
+                                src="../images/facebook.png" alt="Facebook">
+                        </a>
+                        <!-- ================================================= LINKEDIN ================================================== -->
+                        <a href="https://linkedin.com" target="_blank"
+                            aria-label="LinkedIn">
+                            <!-- Image représentant l'icône LinkedIn --> <img
+                                src="../images/in.png" alt="LinkedIn"> </a>
+                    </div> </div> </div> </footer>
+        <!-- ========================================================= JAVASCRIPT ========================================================= -->
+        <!-- Charge le fichier JavaScript. Le fichier script.js contient le comportement dynamique de la page, notamment le fonctionnement du bouton "Retour en haut". -->
+        <script src="../javascript/script.js"></script> </body> </html>

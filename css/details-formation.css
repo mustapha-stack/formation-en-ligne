@@ -1,0 +1,783 @@
+/* =========================================================
+   PAGE DÉTAILS FORMATION
+========================================================= */
+
+/* Conteneur principal de la page */
+.details-container {
+    max-width: 1100px;
+    /* Largeur maximale du contenu */
+    margin: 0 auto;
+    /* Centre le conteneur horizontalement */
+    padding: 60px 25px;
+    /* Espacement intérieur : haut/bas puis gauche/droite */
+}
+
+/* Chaque grande section de la page */
+.details-block {
+    background: #ffffff;
+    /* Fond blanc */
+    border-radius: 16px;
+    /* Arrondit les coins */
+    padding: 35px;
+    /* Espace intérieur */
+    margin-bottom: 35px;
+    /* Espace entre les différentes sections */
+    border: 1px solid #e5e7eb;
+    /* Bordure légère */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    /* Ombre légère */
+}
+
+/* Petit texte utilisé comme étiquette au-dessus du titre */
+.details-block .label {
+    display: inline-block;
+    /* Permet de gérer la largeur et les marges */
+    color: #2563eb;
+    /* Couleur bleue */
+    font-size: 0.8rem;
+    /* Petite taille de texte */
+    font-weight: 700;
+    /* Texte en gras */
+    letter-spacing: 1.5px;
+    /* Espace entre les lettres */
+    margin-bottom: 8px;
+    /* Espace sous l'étiquette */
+}
+
+/* Titres h2 des sections */
+.details-block h2 {
+    margin-top: 0;
+    /* Supprime la marge supérieure */
+    margin-bottom: 28px;
+    /* Espace sous le titre */
+    color: #1f2937;
+    /* Couleur gris foncé */
+    font-size: 1.8rem;
+    /* Taille du titre */
+}
+
+
+/* =========================================================
+   COURS
+========================================================= */
+
+/* Grille contenant la liste des cours */
+.skills-grid {
+    list-style: none;
+    /* Supprime les puces de la liste */
+    padding: 0;
+    /* Supprime l'espace intérieur */
+    margin: 0;
+    /* Supprime la marge extérieure */
+
+    display: grid;
+    /* Utilise CSS Grid */
+    grid-template-columns: repeat(2, 1fr);
+    /* Crée 2 colonnes de même largeur */
+    gap: 15px;
+    /* Espace entre les éléments */
+}
+
+/* Chaque élément de la liste des cours */
+.skills-grid li {
+    background: #f8fafc;
+    /* Fond gris très clair */
+    border: 1px solid #e5e7eb;
+    /* Bordure légère */
+    border-radius: 10px;
+    /* Coins arrondis */
+    padding: 18px 20px;
+    /* Espace intérieur */
+
+    color: #374151;
+    /* Couleur du texte */
+    font-weight: 500;
+    /* Épaisseur moyenne du texte */
+
+    transition: all 0.2s ease;
+    /* Rend les changements plus fluides */
+}
+
+/* Ajoute une coche devant chaque cours */
+.skills-grid li::before {
+    content: "✓";
+    /* Affiche le symbole de validation */
+    display: inline-flex;
+    /* Permet de centrer le symbole */
+    align-items: center;
+    /* Centre verticalement */
+    justify-content: center;
+    /* Centre horizontalement */
+
+    width: 25px;
+    /* Largeur du cercle */
+    height: 25px;
+    /* Hauteur du cercle */
+
+    margin-right: 12px;
+    /* Espace entre la coche et le texte */
+
+    background: #2563eb;
+    /* Fond bleu */
+    color: white;
+    /* Couleur blanche de la coche */
+
+    border-radius: 50%;
+    /* Transforme le carré en cercle */
+    font-size: 0.8rem;
+    /* Taille de la coche */
+    font-weight: bold;
+    /* Coche en gras */
+}
+
+/* Effet lorsque la souris passe sur un cours */
+.skills-grid li:hover {
+    transform: translateY(-2px);
+    /* Déplace légèrement l'élément vers le haut */
+    border-color: #2563eb;
+    /* Change la bordure en bleu */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+    /* Ajoute une ombre */
+}
+
+
+/* =========================================================
+   ÉTAPES
+========================================================= */
+
+/* Liste contenant les différentes étapes */
+.steps-timeline {
+    list-style: none;
+    /* Supprime les puces */
+    padding: 0;
+    /* Supprime l'espace intérieur */
+    margin: 0;
+    /* Supprime la marge */
+
+    counter-reset: steps;
+    /* Initialise le compteur des étapes */
+}
+
+/* Chaque étape de la formation */
+.step-item {
+    position: relative;
+    /* Permet de positionner les éléments associés */
+
+    display: flex;
+    /* Utilise Flexbox */
+    align-items: flex-start;
+    /* Aligne les éléments vers le haut */
+
+    margin-bottom: 20px;
+    /* Espace entre les étapes */
+    padding-left: 70px;
+    /* Laisse de la place pour le numéro */
+}
+
+/* Numéro automatique de chaque étape */
+.step-item::before {
+    counter-increment: steps;
+    /* Augmente le compteur de 1 */
+    content: counter(steps);
+    /* Affiche le numéro de l'étape */
+
+    position: absolute;
+    /* Positionne le numéro indépendamment */
+    left: 0;
+    /* Place le numéro à gauche */
+    top: 0;
+    /* Place le numéro en haut */
+
+    width: 45px;
+    /* Largeur du cercle */
+    height: 45px;
+    /* Hauteur du cercle */
+
+    display: flex;
+    /* Utilise Flexbox */
+    align-items: center;
+    /* Centre verticalement le numéro */
+    justify-content: center;
+    /* Centre horizontalement le numéro */
+
+    background: #2563eb;
+    /* Fond bleu */
+    color: white;
+    /* Numéro blanc */
+
+    border-radius: 50%;
+    /* Transforme le numéro en cercle */
+
+    font-size: 1rem;
+    /* Taille du numéro */
+    font-weight: 700;
+    /* Numéro en gras */
+}
+
+/* Ligne verticale entre les différentes étapes */
+.step-item:not(:last-child)::after {
+    content: "";
+    /* Crée un élément vide */
+
+    position: absolute;
+    /* Positionne la ligne */
+
+    left: 22px;
+    /* Centre la ligne sous le cercle */
+    top: 45px;
+    /* Commence sous le numéro */
+
+    width: 2px;
+    /* Épaisseur de la ligne */
+    height: calc(100% + 20px);
+    /* Hauteur adaptée à l'espace entre les étapes */
+
+    background: #dbeafe;
+    /* Couleur bleu très clair */
+}
+
+/* Contenu textuel de chaque étape */
+.step-content {
+    width: 100%;
+    /* Prend toute la largeur disponible */
+
+    background: #f8fafc;
+    /* Fond gris très clair */
+
+    border: 1px solid #e5e7eb;
+    /* Bordure légère */
+
+    border-radius: 10px;
+    /* Coins arrondis */
+
+    padding: 16px 20px;
+    /* Espace intérieur */
+
+    position: relative;
+    /* Permet de gérer le positionnement */
+    z-index: 1;
+    /* Place le contenu au-dessus de la ligne */
+}
+
+/* Titre h4 de chaque étape */
+.step-content h4 {
+    margin: 0;
+    /* Supprime les marges par défaut */
+
+    color: #374151;
+    /* Couleur du texte */
+    font-size: 1rem;
+    /* Taille du texte */
+    font-weight: 600;
+    /* Texte légèrement en gras */
+}
+
+
+/* =========================================================
+   COMPÉTENCES
+========================================================= */
+
+/* Style spécifique aux éléments de la liste des compétences */
+#competences-liste li {
+    background: #f8fafc;
+    /* Fond gris très clair */
+}
+
+
+/* =========================================================
+   BOUTON RETOUR
+========================================================= */
+
+/* Ajoute un espace au-dessus du dernier élément du conteneur */
+.details-container>div:last-child {
+    margin-top: 45px !important;
+    /* Espace avant le bouton retour */
+}
+
+/* Style général du bouton */
+.details-container .btn {
+    display: inline-block;
+    /* Permet au bouton de garder sa taille */
+
+    padding: 12px 25px;
+    /* Espace intérieur du bouton */
+
+    border-radius: 8px;
+    /* Coins arrondis */
+
+    text-decoration: none;
+    /* Supprime le soulignement du lien */
+
+    font-weight: 600;
+    /* Texte légèrement en gras */
+
+    transition: all 0.2s ease;
+    /* Rend les effets plus fluides */
+}
+
+/* Effet lorsque la souris passe sur le bouton */
+.details-container .btn:hover {
+    transform: translateY(-2px);
+    /* Déplace légèrement le bouton vers le haut */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    /* Ajoute une ombre */
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   PAGE DÉTAILS DE LA FORMATION
+========================================================= */
+
+
+/* =========================================================
+   TABLETTES
+   Écrans jusqu'à 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* -----------------------------------------------------
+       PAGE HEADER
+    ----------------------------------------------------- */
+
+    .page-header {
+        padding: 70px 6%;
+    }
+
+
+    .page-header h1 {
+        font-size: 38px;
+
+        line-height: 1.2;
+    }
+
+
+    .page-header p {
+        font-size: 17px;
+
+        line-height: 1.6;
+    }
+
+
+    /* -----------------------------------------------------
+       CONTENEUR DES DÉTAILS
+    ----------------------------------------------------- */
+
+    .details-container {
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 50px 6%;
+    }
+
+
+    /* -----------------------------------------------------
+       BLOCS DE DÉTAILS
+    ----------------------------------------------------- */
+
+    .details-block {
+        padding: 30px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .details-block h2 {
+        font-size: 28px;
+
+        line-height: 1.3;
+    }
+
+
+    /* -----------------------------------------------------
+       GRILLE DES COURS / COMPÉTENCES
+       
+       Passage de plusieurs colonnes à deux colonnes.
+    ----------------------------------------------------- */
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+
+    /* -----------------------------------------------------
+       TIMELINE DES ÉTAPES
+    ----------------------------------------------------- */
+
+    .steps-timeline {
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       BOUTON RETOUR
+    ----------------------------------------------------- */
+
+    .details-container>div:last-child {
+        margin-top: 30px !important;
+    }
+
+}
+
+
+/* =========================================================
+   TÉLÉPHONES
+   Écrans jusqu'à 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* -----------------------------------------------------
+       HEADER
+    ----------------------------------------------------- */
+
+    header {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 15px;
+
+        padding: 20px 5%;
+    }
+
+
+    /* -----------------------------------------------------
+       LOGO
+    ----------------------------------------------------- */
+
+    .logo {
+        justify-content: center;
+
+        text-align: center;
+    }
+
+
+    .logo span {
+        font-size: 17px;
+    }
+
+
+    /* -----------------------------------------------------
+       MENU
+    ----------------------------------------------------- */
+
+    nav {
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 8px;
+    }
+
+
+    nav a {
+        font-size: 14px;
+
+        padding: 8px 10px;
+    }
+
+
+    /* -----------------------------------------------------
+       PAGE HEADER
+    ----------------------------------------------------- */
+
+    .page-header {
+        padding: 60px 5%;
+    }
+
+
+    .page-header h1 {
+        font-size: 30px;
+
+        line-height: 1.2;
+
+        overflow-wrap: break-word;
+    }
+
+
+    .page-header p {
+        font-size: 16px;
+
+        line-height: 1.6;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* -----------------------------------------------------
+       CONTENEUR PRINCIPAL
+    ----------------------------------------------------- */
+
+    .details-container {
+        width: 100%;
+
+        padding: 45px 5%;
+    }
+
+
+    /* -----------------------------------------------------
+       BLOCS DE DÉTAILS
+    ----------------------------------------------------- */
+
+    .details-block {
+        padding: 25px 20px;
+
+        margin-bottom: 20px;
+
+        border-radius: 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       TITRES
+    ----------------------------------------------------- */
+
+    .details-block h2 {
+        font-size: 24px;
+
+        line-height: 1.3;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* -----------------------------------------------------
+       COURS ET COMPÉTENCES
+       
+       Une seule colonne sur téléphone.
+    ----------------------------------------------------- */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       ÉLÉMENTS DES LISTES
+       
+       Empêche les textes longs de sortir de l'écran.
+    ----------------------------------------------------- */
+
+    .skills-grid li,
+    .steps-timeline li {
+        min-width: 0;
+
+        overflow-wrap: break-word;
+
+        word-break: normal;
+
+        line-height: 1.5;
+    }
+
+
+    /* -----------------------------------------------------
+       ÉTAPES
+    ----------------------------------------------------- */
+
+    .steps-timeline {
+        width: 100%;
+
+        padding-left: 25px;
+    }
+
+
+    .steps-timeline li {
+        font-size: 15px;
+
+        margin-bottom: 15px;
+    }
+
+
+    /* -----------------------------------------------------
+       BOUTON RETOUR
+    ----------------------------------------------------- */
+
+    .details-container>div:last-child {
+        margin-top: 30px !important;
+
+        padding: 0;
+    }
+
+
+    .details-container>div:last-child .btn {
+        display: inline-block;
+
+        width: 100%;
+
+        max-width: 320px;
+
+        text-align: center;
+
+        line-height: 1.4;
+
+        padding: 12px 18px;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+    ----------------------------------------------------- */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 30px;
+
+        padding: 40px 6%;
+    }
+
+
+    /* -----------------------------------------------------
+       BOUTON CONTACT
+    ----------------------------------------------------- */
+
+    .btn-contact {
+        display: inline-block;
+
+        width: 100%;
+
+        max-width: 250px;
+
+        text-align: center;
+    }
+
+
+    /* -----------------------------------------------------
+       RÉSEAUX SOCIAUX
+    ----------------------------------------------------- */
+
+    .social-icons {
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================================================
+   PETITS TÉLÉPHONES
+   Écrans jusqu'à 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    /* -----------------------------------------------------
+       HEADER
+    ----------------------------------------------------- */
+
+    header {
+        padding: 18px 4%;
+    }
+
+
+    .logo span {
+        font-size: 15px;
+    }
+
+
+    .logo-icon {
+        font-size: 24px;
+    }
+
+
+    /* -----------------------------------------------------
+       MENU
+    ----------------------------------------------------- */
+
+    nav {
+        gap: 5px;
+    }
+
+
+    nav a {
+        font-size: 13px;
+
+        padding: 7px 8px;
+    }
+
+
+    /* -----------------------------------------------------
+       PAGE HEADER
+    ----------------------------------------------------- */
+
+    .page-header {
+        padding: 50px 5%;
+    }
+
+
+    .page-header h1 {
+        font-size: 27px;
+    }
+
+
+    .page-header p {
+        font-size: 15px;
+    }
+
+
+    /* -----------------------------------------------------
+       CONTENEUR
+    ----------------------------------------------------- */
+
+    .details-container {
+        padding: 40px 5%;
+    }
+
+
+    /* -----------------------------------------------------
+       BLOCS
+    ----------------------------------------------------- */
+
+    .details-block {
+        padding: 20px 15px;
+
+        border-radius: 10px;
+    }
+
+
+    /* -----------------------------------------------------
+       TITRES
+    ----------------------------------------------------- */
+
+    .details-block h2 {
+        font-size: 21px;
+    }
+
+
+    /* -----------------------------------------------------
+       LISTES
+    ----------------------------------------------------- */
+
+    .skills-grid li,
+    .steps-timeline li {
+        font-size: 14px;
+    }
+
+
+    /* -----------------------------------------------------
+       BOUTON RETOUR
+    ----------------------------------------------------- */
+
+    .details-container>div:last-child .btn {
+        width: 100%;
+
+        font-size: 14px;
+
+        padding: 11px 12px;
+    }
+
+}
