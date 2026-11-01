@@ -10,7 +10,7 @@ const JSON_URL = "../javascript/formations.json";
    ========================================================= */
 
 async function chargerDonnees() {
-    const response = await fetch(JSON_URL);
+    const response = await fetch('./javascript/formations.json');
 
     // Vérifie si la réponse du serveur est correcte
     if (!response.ok) {
