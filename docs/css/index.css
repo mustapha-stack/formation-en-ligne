@@ -24,7 +24,7 @@
       linear-gradient(135deg,
          rgba(0, 40, 85, 0.92),
          rgba(7, 30, 61, 0.95)),
-      url("../images/accueil.jpg");
+      url("../docs/images/accueil.jpg");
 
    /* L'image couvre toute la section */
    background-size: cover;
