@@ -1,0 +1,515 @@
+/* =========================================================
+   SECTION DEUX COLONNES (À PROPOS)
+   - Permet d'afficher du contenu sur deux colonnes
+========================================================= */
+
+.two-columns {
+    /* Définit une largeur maximale pour la section */
+    max-width: 1150px;
+
+    /* Centre automatiquement la section horizontalement */
+    margin: auto;
+
+    /* Utilise CSS Grid pour organiser les éléments */
+    display: grid;
+
+    /* Crée deux colonnes de largeur égale */
+    grid-template-columns: 1fr 1fr;
+
+    /* Ajoute un espace de 60px entre les deux colonnes */
+    gap: 60px;
+
+    /* Centre verticalement les éléments des deux colonnes */
+    align-items: center;
+}
+
+
+/* Style de l'image présente dans la section deux colonnes */
+.two-columns img {
+
+    /* L'image occupe toute la largeur disponible */
+    width: 100%;
+
+    /* Arrondit les coins de l'image */
+    border-radius: 10px;
+
+    /* Ajoute une légère ombre autour de l'image */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    /* Ajoute une fine bordure autour de l'image */
+    border: 1px solid var(--border-color);
+}
+
+
+/* Style du titre H2 de la section deux colonnes */
+.two-columns h2 {
+
+    /* Utilise la couleur bleu nuit définie dans les variables */
+    color: var(--navy-dark);
+
+    /* Définit la taille du titre */
+    font-size: 36px;
+
+    /* Rend le texte du titre très épais */
+    font-weight: 800;
+
+    /* Définit la hauteur entre les lignes */
+    line-height: 1.25;
+
+    /* Ajoute un espace sous le titre */
+    margin-bottom: 20px;
+}
+
+
+/* Style des paragraphes de la section deux colonnes */
+.two-columns p {
+
+    /* Utilise la couleur grise définie dans les variables */
+    color: var(--text-gray);
+
+    /* Ajoute un espace sous chaque paragraphe */
+    margin-bottom: 18px;
+}
+
+
+/* Liste contenant les éléments avec les coches */
+.check-list {
+
+    /* Supprime les puces classiques de la liste */
+    list-style: none;
+
+    /* Ajoute des marges au-dessus et en dessous de la liste */
+    margin: 25px 0 30px;
+}
+
+
+/* Chaque élément de la liste avec une coche */
+.check-list li {
+
+    /* Ajoute un espace entre les différents éléments */
+    margin-bottom: 12px;
+
+    /* Utilise la couleur principale du texte */
+    color: var(--text-dark);
+
+    /* Rend le texte légèrement plus épais */
+    font-weight: 600;
+
+    /* Permet d'aligner correctement la coche et le texte */
+    display: flex;
+
+    /* Centre verticalement la coche et le texte */
+    align-items: center;
+}
+
+
+/* Création de la coche avant chaque élément de la liste */
+.check-list li::before {
+
+    /* Affiche le symbole de validation */
+    content: "✓";
+
+    /* Utilise Flexbox pour centrer la coche */
+    display: inline-flex;
+
+    /* Centre verticalement la coche */
+    align-items: center;
+
+    /* Centre horizontalement la coche */
+    justify-content: center;
+
+    /* Définit la largeur du cercle */
+    width: 22px;
+
+    /* Définit la hauteur du cercle */
+    height: 22px;
+
+    /* Ajoute un fond rouge très léger */
+    background-color: rgba(217, 56, 58, 0.1);
+
+    /* Utilise la couleur rouge principale pour la coche */
+    color: var(--accent-red);
+
+    /* Transforme le fond en cercle */
+    border-radius: 50%;
+
+    /* Définit la taille de la coche */
+    font-size: 12px;
+
+    /* Rend la coche plus épaisse */
+    font-weight: bold;
+
+    /* Ajoute un espace entre la coche et le texte */
+    margin-right: 12px;
+}
+
+
+
+/* =========================================================
+   BANNIÈRE CTA (CALL TO ACTION)
+   - Section destinée à encourager l'utilisateur à agir
+========================================================= */
+
+.cta-banner {
+
+    /* Ajoute un espace intérieur vertical et horizontal */
+    padding: 80px 8%;
+
+    /* Crée un dégradé entre deux nuances de bleu */
+    background: linear-gradient(135deg, var(--navy-header), var(--navy-dark));
+
+    /* Utilise le blanc pour le texte */
+    color: white;
+
+    /* Centre horizontalement le contenu */
+    text-align: center;
+}
+
+
+
+/* =========================================================
+   PAGE HEADER (PAGES INTERNES)
+   - En-tête utilisé sur les pages secondaires du site
+========================================================= */
+
+.page-header {
+
+    /* Ajoute un grand espace intérieur autour du contenu */
+    padding: 90px 8%;
+
+    /* Crée un dégradé bleu pour l'arrière-plan */
+    background: linear-gradient(135deg, var(--navy-header), var(--navy-dark));
+
+    /* Définit la couleur du texte en blanc */
+    color: white;
+
+    /* Centre le contenu de l'en-tête */
+    text-align: center;
+
+    /* Ajoute une bordure rouge en bas de l'en-tête */
+    border-bottom: 4px solid var(--accent-red);
+}
+
+
+/* Style du grand titre de l'en-tête des pages internes */
+.page-header h1 {
+
+    /* Définit la taille du titre */
+    font-size: 46px;
+
+    /* Rend le titre très épais */
+    font-weight: 800;
+
+    /* Ajoute un espace sous le titre */
+    margin-bottom: 18px;
+
+    /* Définit la hauteur entre les lignes */
+    line-height: 1.2;
+}
+
+
+/* Style du paragraphe situé dans l'en-tête */
+.page-header p {
+
+    /* Limite la largeur du paragraphe pour faciliter la lecture */
+    max-width: 720px;
+
+    /* Centre automatiquement le paragraphe */
+    margin: auto;
+
+    /* Définit la taille du texte */
+    font-size: 18px;
+
+    /* Utilise une couleur gris clair pour le paragraphe */
+    color: #e2e8f0;
+}
+
+
+
+
+/* =========================================================
+   RESPONSIVE - SECTION DEUX COLONNES
+   Adaptation pour tablettes et téléphones
+========================================================= */
+
+
+/* =========================================================
+   TABLETTES
+   Écrans jusqu'à 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* -----------------------------------------------------
+       SECTION DEUX COLONNES
+       Les deux colonnes restent côte à côte,
+       mais l'espace entre elles est réduit.
+    ----------------------------------------------------- */
+
+    .two-columns {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px;
+
+        padding: 0 6%;
+    }
+
+
+    /* -----------------------------------------------------
+       TITRE
+    ----------------------------------------------------- */
+
+    .two-columns h2 {
+        font-size: 30px;
+    }
+
+
+    /* -----------------------------------------------------
+       PARAGRAPHES
+    ----------------------------------------------------- */
+
+    .two-columns p {
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+
+    /* -----------------------------------------------------
+       LISTE
+    ----------------------------------------------------- */
+
+    .check-list li {
+        font-size: 15px;
+    }
+
+
+    /* -----------------------------------------------------
+       CTA
+    ----------------------------------------------------- */
+
+    .cta-banner {
+        padding: 65px 6%;
+    }
+
+
+    /* -----------------------------------------------------
+       PAGE HEADER
+    ----------------------------------------------------- */
+
+    .page-header {
+        padding: 70px 6%;
+    }
+
+    .page-header h1 {
+        font-size: 38px;
+    }
+
+    .page-header p {
+        font-size: 17px;
+    }
+}
+
+
+/* =========================================================
+   TÉLÉPHONES
+   Écrans jusqu'à 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* -----------------------------------------------------
+       SECTION DEUX COLONNES
+       Les deux colonnes deviennent une seule colonne.
+       
+       L'image et le texte sont donc placés
+       l'un sous l'autre.
+    ----------------------------------------------------- */
+
+    .two-columns {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 0 5%;
+    }
+
+
+    /* -----------------------------------------------------
+       IMAGE
+       L'image reste entièrement dans son conteneur.
+    ----------------------------------------------------- */
+
+    .two-columns img {
+        width: 100%;
+
+        border-radius: 10px;
+    }
+
+
+    /* -----------------------------------------------------
+       TITRE
+    ----------------------------------------------------- */
+
+    .two-columns h2 {
+        font-size: 28px;
+
+        line-height: 1.25;
+
+        margin-bottom: 15px;
+    }
+
+
+    /* -----------------------------------------------------
+       PARAGRAPHES
+    ----------------------------------------------------- */
+
+    .two-columns p {
+        font-size: 16px;
+
+        line-height: 1.6;
+
+        margin-bottom: 15px;
+    }
+
+
+    /* -----------------------------------------------------
+       LISTE À COCHES
+    ----------------------------------------------------- */
+
+    .check-list {
+        margin: 20px 0 25px;
+    }
+
+
+    .check-list li {
+        font-size: 15px;
+
+        line-height: 1.5;
+
+        align-items: flex-start;
+    }
+
+
+    /* -----------------------------------------------------
+       COCHES
+       Empêche la coche de se déformer lorsque
+       le texte passe sur plusieurs lignes.
+    ----------------------------------------------------- */
+
+    .check-list li::before {
+        flex-shrink: 0;
+
+        width: 22px;
+
+        height: 22px;
+
+        margin-right: 10px;
+    }
+
+
+    /* -----------------------------------------------------
+       CTA
+    ----------------------------------------------------- */
+
+    .cta-banner {
+        padding: 55px 5%;
+    }
+
+
+    /* -----------------------------------------------------
+       PAGE HEADER
+    ----------------------------------------------------- */
+
+    .page-header {
+        padding: 60px 5%;
+    }
+
+
+    .page-header h1 {
+        font-size: 30px;
+
+        line-height: 1.2;
+    }
+
+
+    .page-header p {
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+}
+
+
+/* =========================================================
+   PETITS TÉLÉPHONES
+   Écrans jusqu'à 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    /* -----------------------------------------------------
+       DEUX COLONNES
+    ----------------------------------------------------- */
+
+    .two-columns {
+        gap: 25px;
+
+        padding: 0 5%;
+    }
+
+
+    /* -----------------------------------------------------
+       TITRE
+    ----------------------------------------------------- */
+
+    .two-columns h2 {
+        font-size: 25px;
+    }
+
+
+    /* -----------------------------------------------------
+       TEXTE
+    ----------------------------------------------------- */
+
+    .two-columns p {
+        font-size: 15px;
+    }
+
+
+    /* -----------------------------------------------------
+       LISTE
+    ----------------------------------------------------- */
+
+    .check-list li {
+        font-size: 14px;
+    }
+
+
+    /* -----------------------------------------------------
+       CTA
+    ----------------------------------------------------- */
+
+    .cta-banner {
+        padding: 45px 5%;
+    }
+
+
+    /* -----------------------------------------------------
+       PAGE HEADER
+    ----------------------------------------------------- */
+
+    .page-header {
+        padding: 50px 5%;
+    }
+
+
+    .page-header h1 {
+        font-size: 27px;
+    }
+
+
+    .page-header p {
+        font-size: 15px;
+    }
+}

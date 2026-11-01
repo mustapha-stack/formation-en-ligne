@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Black">
+<<<<<<< HEAD
     <option name="sdkName" value="Python 3.14 (vCard)" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.14 (vCard)" project-jdk-type="Python SDK" />
+=======
+    <option name="sdkName" value="Python 3.13 (projet 3 mustapha belhaouari)" />
+  </component>
+>>>>>>> dc9bc2c0b666a3c4c10a7a709c0649a4c2a40b98
 </project>

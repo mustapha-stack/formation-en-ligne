@@ -1,0 +1,517 @@
+/* =========================================================
+   SECTION HERO
+   Grande section principale située en haut de la page
+========================================================= */
+
+.hero {
+   /* Hauteur minimale de la section */
+   min-height: 520px;
+
+   /* Utilise Flexbox pour organiser le contenu */
+   display: flex;
+
+   /* Centre verticalement le contenu */
+   align-items: center;
+
+   /* Espacement intérieur :
+       80px en haut et en bas,
+       8% à gauche et à droite */
+   padding: 80px 8%;
+
+   /* Image de fond avec un dégradé bleu par-dessus
+       pour rendre le texte plus visible */
+   background:
+      linear-gradient(135deg,
+         rgba(0, 40, 85, 0.92),
+         rgba(7, 30, 61, 0.95)),
+      url("../images/accueil.jpg");
+
+   /* L'image couvre toute la section */
+   background-size: cover;
+
+   /* Centre l'image dans la section */
+   background-position: center;
+}
+
+
+/* =========================================================
+   CONTENU DE LA SECTION HERO
+========================================================= */
+
+.hero-content {
+   /* Limite la largeur du contenu */
+   max-width: 850px;
+
+   /* Définit la couleur du texte en blanc */
+   color: white;
+}
+
+
+/* =========================================================
+   PETIT LABEL AU-DESSUS DU TITRE
+========================================================= */
+
+.hero-label {
+   /* Couleur rouge clair du label */
+   color: #ff9b9d;
+
+   /* Taille du texte */
+   font-size: 13px;
+
+   /* Rend le texte très épais */
+   font-weight: 800;
+
+   /* Espace entre les lettres */
+   letter-spacing: 2px;
+
+   /* Transforme le texte en lettres majuscules */
+   text-transform: uppercase;
+
+   /* Espace sous le label */
+   margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   TITRE PRINCIPAL DE LA SECTION HERO
+========================================================= */
+
+.hero h1 {
+   /* Taille du titre */
+   font-size: 52px;
+
+   /* Hauteur entre les lignes du titre */
+   line-height: 1.15;
+
+   /* Rend le titre épais */
+   font-weight: 800;
+
+   /* Espace sous le titre */
+   margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   PARAGRAPHE DE LA SECTION HERO
+========================================================= */
+
+.hero p {
+   /* Limite la largeur du paragraphe
+       pour faciliter sa lecture */
+   max-width: 680px;
+
+   /* Taille du texte */
+   font-size: 19px;
+
+   /* Hauteur entre les lignes */
+   line-height: 1.6;
+
+   /* Couleur gris clair du texte */
+   color: #e2e8f0;
+
+   /* Espace sous le paragraphe */
+   margin-bottom: 35px;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   Adaptation de la page pour les tablettes et téléphones
+========================================================= */
+
+
+/* =========================================================
+   TABLETTES
+   Écrans jusqu'à 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+   /* -----------------------------------------------------
+       HEADER
+    ----------------------------------------------------- */
+
+   header {
+      padding: 15px 5%;
+   }
+
+   .logo span {
+      font-size: 18px;
+   }
+
+   nav {
+      gap: 15px;
+   }
+
+   nav a {
+      font-size: 14px;
+   }
+
+
+   /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
+
+   .hero {
+      min-height: 450px;
+      padding: 60px 6%;
+   }
+
+   .hero-content {
+      max-width: 650px;
+   }
+
+   .hero h1 {
+      font-size: 42px;
+      line-height: 1.15;
+   }
+
+   .hero p {
+      font-size: 17px;
+   }
+
+
+   /* -----------------------------------------------------
+       SECTION
+    ----------------------------------------------------- */
+
+   .section {
+      padding: 60px 6%;
+   }
+
+   .section-header {
+      max-width: 700px;
+   }
+
+
+   /* -----------------------------------------------------
+       CARTES
+    ----------------------------------------------------- */
+
+   .cards {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+   }
+
+   /*
+       La troisième carte prend toute la largeur
+       lorsqu'il ne reste que deux colonnes.
+    */
+
+   .card:last-child {
+      grid-column: 1 / -1;
+   }
+
+
+   /* -----------------------------------------------------
+       FOOTER
+    ----------------------------------------------------- */
+
+   .footer-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+   }
+
+}
+
+
+/* =========================================================
+   TÉLÉPHONES
+   Écrans jusqu'à 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+   /* -----------------------------------------------------
+       HEADER
+    ----------------------------------------------------- */
+
+   header {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+
+      padding: 20px 5%;
+   }
+
+
+   /* -----------------------------------------------------
+       LOGO
+    ----------------------------------------------------- */
+
+   .logo {
+      justify-content: center;
+      text-align: center;
+   }
+
+   .logo span {
+      font-size: 17px;
+   }
+
+
+   /* -----------------------------------------------------
+       MENU
+    ----------------------------------------------------- */
+
+   nav {
+      width: 100%;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      gap: 8px;
+   }
+
+   nav a {
+      font-size: 14px;
+      padding: 8px 10px;
+   }
+
+
+   /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
+
+   .hero {
+      min-height: auto;
+
+      padding: 70px 6%;
+      text-align: center;
+   }
+
+   .hero-content {
+      width: 100%;
+      max-width: 100%;
+   }
+
+   .hero-label {
+      font-size: 12px;
+   }
+
+   .hero h1 {
+      font-size: 32px;
+      line-height: 1.2;
+
+      margin-bottom: 20px;
+   }
+
+   .hero p {
+      font-size: 16px;
+      line-height: 1.6;
+   }
+
+
+   /* -----------------------------------------------------
+       BOUTON HERO
+    ----------------------------------------------------- */
+
+   .hero .btn {
+      display: inline-block;
+
+      width: 100%;
+      max-width: 300px;
+
+      text-align: center;
+   }
+
+
+   /* -----------------------------------------------------
+       SECTION
+    ----------------------------------------------------- */
+
+   .section {
+      padding: 50px 6%;
+   }
+
+   .section-header {
+      width: 100%;
+   }
+
+   .section-header h2 {
+      font-size: 28px;
+      line-height: 1.2;
+   }
+
+   .section-header p {
+      font-size: 16px;
+      line-height: 1.6;
+   }
+
+
+   /* -----------------------------------------------------
+       CARTES
+    ----------------------------------------------------- */
+
+   .cards {
+      grid-template-columns: 1fr;
+
+      gap: 20px;
+   }
+
+   /*
+       Toutes les cartes occupent une seule colonne
+       sur téléphone.
+    */
+
+   .card:last-child {
+      grid-column: auto;
+   }
+
+
+   /* -----------------------------------------------------
+       CONTENU DES CARTES
+    ----------------------------------------------------- */
+
+   .card-content {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 15px;
+   }
+
+   .icon-box {
+      flex-shrink: 0;
+   }
+
+   .card-text {
+      min-width: 0;
+   }
+
+   .card-text h3 {
+      font-size: 20px;
+   }
+
+   .card-text p {
+      font-size: 15px;
+      line-height: 1.5;
+   }
+
+
+   /* -----------------------------------------------------
+       FOOTER
+    ----------------------------------------------------- */
+
+   .footer-container {
+      grid-template-columns: 1fr;
+
+      text-align: center;
+
+      gap: 30px;
+
+      padding: 40px 6%;
+   }
+
+
+   /* -----------------------------------------------------
+       LIENS FOOTER
+    ----------------------------------------------------- */
+
+   .footer-links {
+      padding: 0;
+   }
+
+
+   /* -----------------------------------------------------
+       BOUTON CONTACT
+    ----------------------------------------------------- */
+
+   .btn-contact {
+      display: inline-block;
+
+      width: 100%;
+      max-width: 250px;
+
+      text-align: center;
+   }
+
+
+   /* -----------------------------------------------------
+       RÉSEAUX SOCIAUX
+    ----------------------------------------------------- */
+
+   .social-icons {
+      justify-content: center;
+   }
+
+}
+
+
+/* =========================================================
+   PETITS TÉLÉPHONES
+   Écrans jusqu'à 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+   /* Réduction supplémentaire du logo */
+
+   .logo span {
+      font-size: 15px;
+   }
+
+   .logo-icon {
+      font-size: 24px;
+   }
+
+
+   /* Menu légèrement plus petit */
+
+   nav {
+      gap: 5px;
+   }
+
+   nav a {
+      font-size: 13px;
+      padding: 7px 8px;
+   }
+
+
+   /* Hero */
+
+   .hero {
+      padding: 55px 5%;
+   }
+
+   .hero h1 {
+      font-size: 28px;
+   }
+
+   .hero p {
+      font-size: 15px;
+   }
+
+
+   /* Section */
+
+   .section {
+      padding: 45px 5%;
+   }
+
+   .section-header h2 {
+      font-size: 25px;
+   }
+
+
+   /* Cartes */
+
+   .card {
+      padding: 20px;
+   }
+
+   .card-content {
+      gap: 12px;
+   }
+
+   .card-text h3 {
+      font-size: 18px;
+   }
+
+   .card-text p {
+      font-size: 14px;
+   }
+
+}

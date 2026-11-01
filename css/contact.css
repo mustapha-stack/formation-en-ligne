@@ -1,0 +1,742 @@
+/* =========================================================
+   PAGE CONTACT & FORMULAIRE
+   Styles utilisés pour la grille de contact,
+   le formulaire et les informations de contact.
+========================================================= */
+
+
+/* =========================================================
+   GRILLE DE LA SECTION CONTACT
+========================================================= */
+
+/* Conteneur principal qui sépare le formulaire
+   et les informations de contact en deux colonnes */
+.contact-grid {
+   max-width: 1150px;
+   /* Largeur maximale de la section */
+   margin: auto;
+   /* Centre la section horizontalement */
+   display: grid;
+   /* Utilise le système de grille CSS */
+   grid-template-columns: 3fr 2fr;
+   /* Formulaire plus large que les informations */
+   gap: 40px;
+   /* Espace entre les deux colonnes */
+   align-items: start;
+   /* Aligne les éléments en haut */
+}
+
+
+/* =========================================================
+   CARTES DU FORMULAIRE ET DES INFORMATIONS
+========================================================= */
+
+/* Style commun pour la carte du formulaire
+   et la carte des informations de contact */
+.contact-form-card,
+.contact-info-card {
+   background-color: var(--bg-white);
+   /* Fond blanc */
+   border: 1px solid var(--border-color);
+   /* Bordure légère */
+   border-radius: 10px;
+   /* Coins arrondis */
+   padding: 40px;
+   /* Espace intérieur de la carte */
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+   /* Ombre légère */
+}
+
+
+/* Modifie le fond uniquement de la carte
+   contenant les informations de contact */
+.contact-info-card {
+   background-color: var(--bg-body);
+   /* Utilise la couleur du fond général */
+}
+
+
+/* =========================================================
+   CHAMPS DU FORMULAIRE
+========================================================= */
+
+/* Organise les éléments du formulaire
+   les uns sous les autres */
+.contact-form {
+   display: flex;
+   /* Utilise Flexbox */
+   flex-direction: column;
+   /* Place les éléments verticalement */
+   gap: 20px;
+   /* Espace entre les champs */
+   margin-top: 15px;
+   /* Espace au-dessus du formulaire */
+}
+
+
+/* Groupe contenant généralement un label
+   et son champ de saisie */
+.form-group {
+   display: flex;
+   /* Utilise Flexbox */
+   flex-direction: column;
+   /* Place le label au-dessus du champ */
+   gap: 8px;
+   /* Espace entre le label et le champ */
+}
+
+
+/* Style des labels du formulaire */
+.form-group label {
+   color: var(--navy-dark);
+   /* Couleur bleu foncé */
+   font-size: 14px;
+   /* Taille du texte */
+   font-weight: 700;
+   /* Texte en gras */
+}
+
+
+/* Style commun pour les champs input,
+   select et textarea */
+.form-group input,
+.form-group select,
+.form-group textarea {
+   width: 100%;
+   /* Le champ prend toute la largeur disponible */
+   padding: 12px 16px;
+   /* Espace intérieur du champ */
+   border: 1px solid var(--border-color);
+   /* Bordure du champ */
+   border-radius: 6px;
+   /* Coins légèrement arrondis */
+   background-color: var(--bg-white);
+   /* Fond blanc */
+   color: var(--text-dark);
+   /* Couleur du texte */
+   font-family: inherit;
+   /* Utilise la même police que la page */
+   font-size: 15px;
+   /* Taille du texte */
+   transition: border-color 0.25s ease, box-shadow 0.25s ease;
+   /* Rend les changements de bordure et d'ombre plus fluides */
+}
+
+
+/* =========================================================
+   APPARENCE DES CHAMPS LORSQU'ILS SONT SÉLECTIONNÉS
+========================================================= */
+
+/* Style appliqué lorsqu'un utilisateur clique
+   dans un champ du formulaire */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+   outline: none;
+   /* Supprime le contour automatique du navigateur */
+   border-color: var(--navy-dark);
+   /* Change la couleur de la bordure */
+   box-shadow: 0 0 0 3px rgba(0, 40, 85, 0.12);
+   /* Ajoute une légère zone lumineuse autour du champ */
+}
+
+
+/* =========================================================
+   BOUTON D'ENVOI
+========================================================= */
+
+/* Style du bouton d'envoi du formulaire */
+.btn-submit {
+   border: none;
+   /* Supprime la bordure du bouton */
+   cursor: pointer;
+   /* Affiche une main au survol */
+   align-self: flex-start;
+   /* Aligne le bouton à gauche */
+   margin-top: 10px;
+   /* Ajoute un espace au-dessus du bouton */
+   font-family: inherit;
+   /* Utilise la même police que la page */
+}
+
+.btn-submit:disabled {
+   opacity: 0.5;
+   cursor: not-allowed;
+}
+
+/* Désactive l'effet hover du bouton Envoyer */
+.btn-submit:hover {
+   transform: none;
+   box-shadow: none;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   PAGE CONTACT
+========================================================= */
+
+
+/* =========================================================
+   TABLETTES
+   Écrans jusqu'à 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+   /* -----------------------------------------------------
+       PAGE HEADER
+    ----------------------------------------------------- */
+
+   .page-header {
+      padding: 70px 6%;
+   }
+
+   .page-header h1 {
+      font-size: 38px;
+
+      line-height: 1.2;
+   }
+
+   .page-header p {
+      font-size: 17px;
+
+      line-height: 1.6;
+   }
+
+
+   /* -----------------------------------------------------
+       SECTION CONTACT
+    ----------------------------------------------------- */
+
+   .section {
+      padding: 60px 6%;
+   }
+
+
+   /* -----------------------------------------------------
+       GRILLE CONTACT
+       
+       Les deux colonnes restent côte à côte,
+       mais avec moins d'espace.
+    ----------------------------------------------------- */
+
+   .contact-grid {
+      grid-template-columns: 3fr 2fr;
+
+      gap: 25px;
+
+      width: 100%;
+   }
+
+
+   /* -----------------------------------------------------
+       CARTES
+    ----------------------------------------------------- */
+
+   .contact-form-card,
+   .contact-info-card {
+      min-width: 0;
+
+      padding: 30px;
+   }
+
+
+   /* -----------------------------------------------------
+       TITRES
+    ----------------------------------------------------- */
+
+   .contact-form-card h2,
+   .contact-info-card h2 {
+      font-size: 27px;
+
+      line-height: 1.3;
+   }
+
+
+   /* -----------------------------------------------------
+       FORMULAIRE
+    ----------------------------------------------------- */
+
+   .form-group input,
+   .form-group textarea {
+      width: 100%;
+
+      max-width: 100%;
+
+      box-sizing: border-box;
+   }
+
+
+   /* -----------------------------------------------------
+       INFORMATIONS
+    ----------------------------------------------------- */
+
+   .info-item {
+      min-width: 0;
+   }
+
+   .info-item p {
+      overflow-wrap: break-word;
+   }
+
+}
+
+
+/* =========================================================
+   TÉLÉPHONES
+   Écrans jusqu'à 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+   /* -----------------------------------------------------
+       HEADER
+    ----------------------------------------------------- */
+
+   header {
+      flex-direction: column;
+
+      align-items: center;
+
+      gap: 15px;
+
+      padding: 20px 5%;
+   }
+
+
+   /* -----------------------------------------------------
+       LOGO
+    ----------------------------------------------------- */
+
+   .logo {
+      justify-content: center;
+
+      text-align: center;
+   }
+
+
+   .logo span {
+      font-size: 17px;
+   }
+
+
+   /* -----------------------------------------------------
+       MENU
+    ----------------------------------------------------- */
+
+   nav {
+      width: 100%;
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      gap: 8px;
+   }
+
+
+   nav a {
+      font-size: 14px;
+
+      padding: 8px 10px;
+   }
+
+
+   /* -----------------------------------------------------
+       PAGE HEADER
+    ----------------------------------------------------- */
+
+   .page-header {
+      padding: 60px 5%;
+   }
+
+
+   .page-header h1 {
+      font-size: 30px;
+
+      line-height: 1.2;
+   }
+
+
+   .page-header p {
+      font-size: 16px;
+
+      line-height: 1.6;
+   }
+
+
+   /* -----------------------------------------------------
+       SECTION CONTACT
+    ----------------------------------------------------- */
+
+   .section {
+      padding: 50px 5%;
+   }
+
+
+   /* -----------------------------------------------------
+       GRILLE CONTACT
+       
+       Les deux colonnes deviennent une seule colonne.
+    ----------------------------------------------------- */
+
+   .contact-grid {
+      grid-template-columns: 1fr;
+
+      gap: 25px;
+
+      width: 100%;
+   }
+
+
+   /* -----------------------------------------------------
+       CARTES CONTACT
+    ----------------------------------------------------- */
+
+   .contact-form-card,
+   .contact-info-card {
+      width: 100%;
+
+      min-width: 0;
+
+      padding: 25px 20px;
+
+      box-sizing: border-box;
+   }
+
+
+   /* -----------------------------------------------------
+       TITRES
+    ----------------------------------------------------- */
+
+   .contact-form-card h2,
+   .contact-info-card h2 {
+      font-size: 24px;
+
+      line-height: 1.3;
+
+      margin-bottom: 18px !important;
+   }
+
+
+   /* -----------------------------------------------------
+       LABEL
+    ----------------------------------------------------- */
+
+   .label {
+      font-size: 12px;
+   }
+
+
+   /* -----------------------------------------------------
+       FORMULAIRE
+    ----------------------------------------------------- */
+
+   .contact-form {
+      width: 100%;
+   }
+
+
+   .form-group {
+      width: 100%;
+
+      margin-bottom: 18px;
+   }
+
+
+   .form-group label {
+      font-size: 14px;
+   }
+
+
+   .form-group input,
+   .form-group textarea {
+      width: 100%;
+
+      max-width: 100%;
+
+      box-sizing: border-box;
+
+      font-size: 15px;
+   }
+
+
+   .form-group textarea {
+      min-height: 150px;
+
+      resize: vertical;
+   }
+
+
+   /* -----------------------------------------------------
+       BOUTON ENVOYER
+    ----------------------------------------------------- */
+
+   .btn-submit {
+      width: 100%;
+
+      display: block;
+
+      text-align: center;
+
+      box-sizing: border-box;
+   }
+
+
+   /* -----------------------------------------------------
+       INFORMATIONS DE CONTACT
+    ----------------------------------------------------- */
+
+   .contact-info-card>p {
+      font-size: 15px;
+
+      line-height: 1.6;
+
+      margin-bottom: 25px !important;
+   }
+
+
+   /* -----------------------------------------------------
+       ÉLÉMENTS D'INFORMATION
+    ----------------------------------------------------- */
+
+   .info-item {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 12px;
+
+      width: 100%;
+
+      margin-bottom: 20px;
+   }
+
+
+   /* -----------------------------------------------------
+       ICÔNES
+    ----------------------------------------------------- */
+
+   .info-icon {
+      flex-shrink: 0;
+
+      font-size: 20px;
+   }
+
+
+   /* -----------------------------------------------------
+       TEXTE DES INFORMATIONS
+    ----------------------------------------------------- */
+
+   .info-item div {
+      min-width: 0;
+   }
+
+
+   .info-item strong {
+      font-size: 15px;
+   }
+
+
+   .info-item p {
+      font-size: 14px;
+
+      line-height: 1.5;
+
+      overflow-wrap: break-word;
+
+      margin: 5px 0 0;
+   }
+
+
+   /* -----------------------------------------------------
+       FOOTER
+    ----------------------------------------------------- */
+
+   .footer-container {
+      grid-template-columns: 1fr;
+
+      text-align: center;
+
+      gap: 30px;
+
+      padding: 40px 6%;
+   }
+
+
+   /* -----------------------------------------------------
+       BOUTON CONTACT FOOTER
+    ----------------------------------------------------- */
+
+   .btn-contact {
+      display: inline-block;
+
+      width: 100%;
+
+      max-width: 250px;
+
+      text-align: center;
+   }
+
+
+   /* -----------------------------------------------------
+       RÉSEAUX SOCIAUX
+    ----------------------------------------------------- */
+
+   .social-icons {
+      justify-content: center;
+   }
+
+}
+
+
+/* =========================================================
+   PETITS TÉLÉPHONES
+   Écrans jusqu'à 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+   /* -----------------------------------------------------
+       HEADER
+    ----------------------------------------------------- */
+
+   header {
+      padding: 18px 4%;
+   }
+
+
+   .logo span {
+      font-size: 15px;
+   }
+
+
+   .logo-icon {
+      font-size: 24px;
+   }
+
+
+   /* -----------------------------------------------------
+       MENU
+    ----------------------------------------------------- */
+
+   nav {
+      gap: 5px;
+   }
+
+
+   nav a {
+      font-size: 13px;
+
+      padding: 7px 8px;
+   }
+
+
+   /* -----------------------------------------------------
+       PAGE HEADER
+    ----------------------------------------------------- */
+
+   .page-header {
+      padding: 50px 5%;
+   }
+
+
+   .page-header h1 {
+      font-size: 27px;
+   }
+
+
+   .page-header p {
+      font-size: 15px;
+   }
+
+
+   /* -----------------------------------------------------
+       SECTION
+    ----------------------------------------------------- */
+
+   .section {
+      padding: 40px 5%;
+   }
+
+
+   /* -----------------------------------------------------
+       CARTES
+    ----------------------------------------------------- */
+
+   .contact-form-card,
+   .contact-info-card {
+      padding: 20px 15px;
+
+      border-radius: 10px;
+   }
+
+
+   /* -----------------------------------------------------
+       TITRES
+    ----------------------------------------------------- */
+
+   .contact-form-card h2,
+   .contact-info-card h2 {
+      font-size: 21px;
+   }
+
+
+   /* -----------------------------------------------------
+       FORMULAIRE
+    ----------------------------------------------------- */
+
+   .form-group input,
+   .form-group textarea {
+      font-size: 14px;
+   }
+
+
+   /* -----------------------------------------------------
+       BOUTON
+    ----------------------------------------------------- */
+
+   .btn-submit {
+      font-size: 14px;
+
+      padding: 11px 15px;
+   }
+
+
+   /* -----------------------------------------------------
+       INFORMATIONS
+    ----------------------------------------------------- */
+
+   .info-item {
+      gap: 10px;
+   }
+
+
+   .info-icon {
+      font-size: 18px;
+   }
+
+
+   .info-item strong {
+      font-size: 14px;
+   }
+
+
+   .info-item p {
+      font-size: 13px;
+   }
+
+}
+
+
+
+
+/* Désactive complètement l'effet hover du bouton Envoyer */
+.btn-submit:hover,
+.btn-submit:focus,
+.btn-submit:active {
+   transform: none !important;
+   box-shadow: none !important;
+}
